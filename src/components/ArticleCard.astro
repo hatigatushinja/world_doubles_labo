@@ -1,0 +1,15 @@
+---
+import { CATEGORY_LABELS } from "../lib/categories";
+const { article } = Astro.props;
+const d = article.data;
+const cat = d.category || "other";
+const href = "/ja/articles/" + article.id + "/";
+---
+<a class="card" href={href}>
+  <div class="meta">
+    <span class={"badge c-" + cat}>{CATEGORY_LABELS[cat]}</span>
+    <time datetime={d.date.toISOString().slice(0, 10)}>{d.date.toLocaleDateString("ja-JP")}</time>
+  </div>
+  <h2>{d.title}</h2>
+  {d.summary && <p class="summary">{d.summary}</p>}
+</a>

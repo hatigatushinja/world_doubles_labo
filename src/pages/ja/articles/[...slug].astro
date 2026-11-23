@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../../layouts/Base.astro";
+import { CATEGORY_LABELS } from "../../../lib/categories";
+export async function getStaticPaths() {
+  const articles = await getCollection("articles", ({ data }) => !data.draft);
+  return articles.map((article) => ({ params: { slug: article.id }, props: { article } }));
+}
+const { article } = Astro.props;
+const { Content } = await render(article);
+const d = article.data;
+const cat = d.category || "other";
+const pageTitle = d.title + " | ダブルスラボ（仮称）";
+---
+<Base title={pageTitle} description={d.summary || undefined}>
+  <a class="back-link" href="/ja/">← 記事一覧</a>
+  <article>
+    <header class="article-header">
+      <span class={"badge c-" + cat}>{CATEGORY_LABELS[cat]}</span>
+      <h1>{d.title}</h1>
+      <time datetime={d.date.toISOString().slice(0, 10)} style="color:var(--muted);font-size:.82rem">{d.date.toLocaleDateString("ja-JP", { year: "numeric", month: "long", day: "numeric" })}</time>
+    </header>
+    <div class="article-body"><Content /></div>
+    <aside class="source-box">
+      出典: {d.sourceUrl ? <a href={d.sourceUrl} target="_blank" rel="noopener noreferrer">{d.source || d.sourceUrl}</a> : (d.source || "—")}
+      （出典元の内容を要約したものです。原文の権利は出典元に帰属します）
+    </aside>
+    {d.sample && <p class="sample-note">※公開前のサンプル記事です。パイプライン稼働後に実際の要約記事へ置き換わります。</p>}
+  </article>
+</Base>

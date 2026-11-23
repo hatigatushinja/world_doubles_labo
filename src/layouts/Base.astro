@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+interface Props { title?: string; description?: string }
+const {
+  title = "ダブルスラボ（仮称）— 週末ダブルスプレーヤーのための上達情報",
+  description = "ダブルスの戦術・技術・練習法を、海外の信頼できる指導ソースから要約して日本語で紹介。競技者と40代の社会人週末ダブルスプレーヤー向け。",
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <header class="site-header"><div class="wrap"><a href="/ja/" class="logo">🎾 ダブルスラボ<small>（仮称）</small></a></div></header>
+    <main class="wrap"><slot /></main>
+    <footer class="site-footer"><div class="wrap"><p>海外の信頼できるテニス指導ソースを要約して日本語で紹介しています。各記事の原文の権利は出典元に帰属します。</p></div></footer>
+  </body>
+</html>

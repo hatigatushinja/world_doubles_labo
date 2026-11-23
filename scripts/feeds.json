@@ -1,0 +1,47 @@
+{
+  "feeds": [
+    {
+      "name": "Feel Tennis",
+      "url": "https://feeltennis.net/feed/"
+    },
+    {
+      "name": "Perfect Tennis",
+      "url": "https://www.perfect-tennis.com/feed/"
+    },
+    {
+      "name": "Tennis Nation",
+      "url": "https://tennisnation.com/feed/"
+    },
+    {
+      "name": "Tennis Now",
+      "url": "https://www.tennisnow.com/feed/"
+    }
+  ],
+  "doublesKeywords": [
+    "doubles",
+    "poach",
+    "partner",
+    "net player",
+    "volley",
+    "serve and volley",
+    "i-formation",
+    "australian formation",
+    "two back",
+    "lob"
+  ],
+  "trainingKeywords": [
+    "drill",
+    "technique",
+    "tactic",
+    "strategy",
+    "practice",
+    "footwork",
+    "fitness",
+    "tip",
+    "how to",
+    "lesson",
+    "return",
+    "serve",
+    "mental"
+  ]
+}
