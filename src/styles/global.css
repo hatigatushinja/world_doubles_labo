@@ -135,3 +135,6 @@ a.float:hover{box-shadow:0 16px 40px -12px rgba(16,16,20,.35)}
 @media (max-width:560px){.fig-pair{grid-template-columns:1fr}.fig-pair svg{max-width:320px;margin:0 auto}}
 .matrix.signs{grid-template-columns:repeat(3,1fr)}
 .article-body blockquote{border-left:3px solid var(--ball);background:#fff;border-radius:0 12px 12px 0;padding:14px 18px;font-weight:600;color:var(--text)}
+.article-body .summary-box{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:16px 20px}
+.article-body .summary-box b{display:block;font-size:14px;color:var(--blue);margin-bottom:6px}
+.article-body .summary-box ul{margin:0;padding-left:1.1em}
