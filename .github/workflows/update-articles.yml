@@ -1,7 +1,8 @@
 name: update-articles
+# 定期実行は停止中（2026-11-23、ユーザーの指示）。再開するときは schedule を戻す:
+#   schedule:
+#     - cron: "0 22,4,10 * * *"   # JST 7:00 / 13:00 / 19:00
 on:
-  schedule:
-    - cron: "0 22,4,10 * * *"   # JST 7:00 / 13:00 / 19:00
   workflow_dispatch: {}
 permissions:
   contents: write
