@@ -1,15 +1,18 @@
 ---
-import { CATEGORY_LABELS } from "../lib/categories";
-const { article } = Astro.props;
+import { CATEGORY_LABELS, imageFor, readingMinutes, relativeDate } from "../lib/categories";
+interface Props { article: any; feature?: boolean }
+const { article, feature = false } = Astro.props;
 const d = article.data;
 const cat = d.category || "other";
 const href = "/ja/articles/" + article.id + "/";
+const mins = readingMinutes(article.body);
 ---
-<a class="card" href={href}>
-  <div class="meta">
-    <span class={"badge c-" + cat}>{CATEGORY_LABELS[cat]}</span>
-    <time datetime={d.date.toISOString().slice(0, 10)}>{d.date.toLocaleDateString("ja-JP")}</time>
+<a class={"card reveal" + (feature ? " feature" : "")} data-c={cat} href={href}>
+  <div class="thumb"><img src={imageFor(d)} alt="" loading={feature ? "eager" : "lazy"} decoding="async" width="1400" height="934" /></div>
+  <div class="body">
+    <div class="meta"><span class={"cat c-" + cat}>{CATEGORY_LABELS[cat]}</span><time datetime={d.date.toISOString().slice(0, 10)}>{relativeDate(d.date)}</time></div>
+    <h3>{d.title}</h3>
+    {d.summary && <p>{d.summary}</p>}
+    <div class="foot"><span class="src">{d.source || "—"}</span><span>{mins}分で読める</span></div>
   </div>
-  <h2>{d.title}</h2>
-  {d.summary && <p class="summary">{d.summary}</p>}
 </a>

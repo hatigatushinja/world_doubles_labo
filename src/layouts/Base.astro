@@ -1,14 +1,16 @@
 ---
 import "../styles/global.css";
-interface Props { title?: string; description?: string }
+interface Props { title?: string; description?: string; image?: string }
 const {
-  title = "ダブルスラボ（仮称）— 週末ダブルスプレーヤーのための上達情報",
-  description = "ダブルスの戦術・技術・練習法を、海外の信頼できる指導ソースから要約して日本語で紹介。競技者と40代の社会人週末ダブルスプレーヤー向け。",
+  title = "Doubles Labo — 世界のダブルスの最新の知見を、日本語で。",
+  description = "海外のコーチやポッドキャストの発信から、テニスのダブルスの戦術と練習法を毎日集めて日本語で要約。すべての記事に出典リンク付き。",
+  image = "/images/hero.jpg",
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image, Astro.site);
 ---
 <!doctype html>
-<html lang="ja">
+<html lang="ja" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,12 +21,29 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#FBFBFA" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script is:inline>document.documentElement.classList.remove("no-js")</script>
   </head>
   <body>
-    <header class="site-header"><div class="wrap"><a href="/ja/" class="logo">🎾 ダブルスラボ<small>（仮称）</small></a></div></header>
-    <main class="wrap"><slot /></main>
-    <footer class="site-footer"><div class="wrap"><p>海外の信頼できるテニス指導ソースを要約して日本語で紹介しています。各記事の原文の権利は出典元に帰属します。</p></div></footer>
+    <header class="site-header"><div class="wrap">
+      <a class="logo" href="/ja/"><i></i>Doubles Labo</a>
+      <nav class="site-nav">
+        <a href="/ja/#latest">最新記事</a><a href="/ja/?c=tactics#latest">戦術</a><a href="/ja/?c=practice#latest">練習</a><a href="/ja/?c=fitness#latest">フィジカル</a><a href="/ja/?c=mindset#latest">メンタル</a>
+      </nav>
+      <div class="right"><a class="btn" href="/ja/#latest">最新記事 <span class="ar">→</span></a></div>
+    </div></header>
+    <main><slot /></main>
+    <footer class="site-footer"><div class="wrap">© Doubles Labo · 海外の発信を要約して紹介しています。原文はコピーせず、各記事に出典リンクを付けています。原文の権利は出典元に帰属します。</div></footer>
+    <script is:inline>
+      (()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+      document.querySelectorAll(".reveal").forEach(el=>io.observe(el));})();
+    </script>
   </body>
 </html>

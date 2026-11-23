@@ -2,15 +2,80 @@
 import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
+import { CATEGORY_LABELS, readingMinutes } from "../../lib/categories";
+import feedsConfig from "../../../scripts/feeds.json";
+
 const articles = (await getCollection("articles", ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const latest = articles[0];
+const weekAgo = Date.now() - 7 * 86400000;
+const thisWeek = articles.filter((a) => a.data.date.valueOf() >= weekAgo).length;
+const feeds = feedsConfig.feeds.map((f) => f.name);
+const cats = ["tactics", "technique", "practice", "fitness", "mindset"].filter((c) => articles.some((a) => a.data.category === c));
 ---
 <Base>
-  <section class="hero">
-    <h1>週末のダブルスを、一段強くする。</h1>
-    <p>海外の信頼できる指導ソースから、ダブルスの戦術・技術・練習法を要約して日本語で紹介します。競技者から40代の社会人プレーヤーまで。</p>
-  </section>
-  <ul class="article-list">
-    {articles.map((a) => <li><ArticleCard article={a} /></li>)}
-  </ul>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <a class="badge" href="#latest"><b>今週</b>新しい記事を{thisWeek}本公開しました →</a>
+        <h1 id="h1">世界のダブルスの<br><em>最新の知見</em>を、<br>日本語で。</h1>
+        <p class="lead">海外のコーチやテニスメディアの発信から、ダブルスの戦術と練習法を集めて要約しています。すべての記事に出典リンクを付けています。</p>
+        <div class="cta"><a class="btn" href="#latest">最新記事を読む <span class="ar">→</span></a><a class="btn light" href="#how">記事ができるまで</a></div>
+        <div class="stats">
+          <div><b data-count={feeds.length}>{feeds.length}</b>海外の情報源</div>
+          <div><b data-count={articles.length}>{articles.length}</b>公開記事</div>
+          <div><b data-count="3">3</b>1日の更新回数</div>
+        </div>
+      </div>
+      <div class="visual">
+        <img class="photo" src="/images/hero.jpg" alt="明るいハードコートでネット前に詰めるダブルスのペア" width="1400" height="934" fetchpriority="high" />
+        {latest && (
+          <a class="float f1" href={"/ja/articles/" + latest.id + "/"}>
+            <div class="t">Latest · {readingMinutes(latest.body)} min</div>
+            <div class="v">{latest.data.title}</div>
+            <div class="row"><span class={"cat c-" + latest.data.category}>{CATEGORY_LABELS[latest.data.category]}</span></div>
+          </a>
+        )}
+        {latest && <div class="float f2"><div class="t">Source</div><div class="v">{latest.data.source || "—"}</div></div>}
+        <div class="float f3"><span class="dot"></span><span>1日3回、自動で更新</span></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="strip"><div class="wrap"><b>情報源</b>{feeds.map((n) => <span>{n}</span>)}</div></div>
+
+  <div class="wrap">
+    <div class="sh reveal" id="latest">
+      <div><h2>最新の記事</h2><p>海外の発信を要約して、試合で使えるところまでまとめています。</p></div>
+      <div class="seg" id="seg"><span class="pill"></span><button class="on" data-f="all">すべて</button>{cats.map((c) => <button data-f={c}>{CATEGORY_LABELS[c]}</button>)}</div>
+    </div>
+    <section class="grid" id="grid">
+      {articles.map((a, i) => <ArticleCard article={a} feature={i === 0} />)}
+    </section>
+    {articles.length === 0 && <p class="empty">記事を準備中です。</p>}
+
+    <div class="sh reveal" id="how"><div><h2>記事ができるまで</h2><p>そのまま翻訳するのではなく、要点をまとめて出典を明記しています。</p></div></div>
+    <section class="how">
+      <div class="step reveal"><div class="ico">⌕</div><div class="n">01</div><h3>海外の発信を集める</h3><p>指導者のブログやテニスメディアから、ダブルスに関係する新しい発信を1日3回集めます。</p></div>
+      <div class="step reveal"><div class="ico">✎</div><div class="n">02</div><h3>要点を日本語でまとめる</h3><p>原文をそのまま訳さず、試合や練習で使えるポイントにしぼって要約します。</p></div>
+      <div class="step reveal"><div class="ico">↗</div><div class="n">03</div><h3>出典にすぐ戻れる</h3><p>すべての記事に元の記事へのリンクを付けているので、詳しく知りたいときは原文を読めます。</p></div>
+    </section>
+
+    <section class="closing reveal"><div><h2>次の試合で試せる知見を、<br>毎日少しずつ。</h2><p>新しい記事は毎日追加されます。気になるカテゴリから読んでみてください。</p></div><a class="btn" href="#latest">記事一覧へ <span class="ar">→</span></a></section>
+  </div>
+
+  <script is:inline>
+    (()=>{
+      const h=document.getElementById("h1");let i=0;
+      [...h.childNodes].forEach(n=>{if(n.nodeName==="BR")return;const s=document.createElement("span");s.className="w";s.style.animationDelay=(i++*0.12)+"s";h.replaceChild(s,n);s.appendChild(n)});
+      document.querySelectorAll("[data-count]").forEach(el=>{const to=+el.dataset.count;el.textContent="0";let t0;const f=t=>{t0??=t;const p=Math.min((t-t0)/1200,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));p<1&&requestAnimationFrame(f)};setTimeout(()=>requestAnimationFrame(f),800)});
+      const seg=document.getElementById("seg"),pill=seg.querySelector(".pill");
+      const move=b=>{pill.style.left=b.offsetLeft+"px";pill.style.width=b.offsetWidth+"px"};
+      const apply=f=>{const b=seg.querySelector('[data-f="'+f+'"]')||seg.querySelector('[data-f="all"]');seg.querySelector(".on").classList.remove("on");b.classList.add("on");move(b);
+        document.querySelectorAll("#grid .card").forEach(c=>{c.classList.toggle("hide",b.dataset.f!=="all"&&c.dataset.c!==b.dataset.f);c.classList.add("in")})};
+      seg.querySelectorAll("button").forEach(b=>b.onclick=()=>apply(b.dataset.f));
+      const q=new URLSearchParams(location.search).get("c");
+      requestAnimationFrame(()=>apply(q||"all"));
+    })();
+  </script>
 </Base>

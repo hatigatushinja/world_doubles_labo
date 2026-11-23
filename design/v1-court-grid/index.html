@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DOUBLES LABO — 世界のダブルス戦術を、図で読む。</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;800;900&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--chalk:#F3F1EA;--ink:#0E0E0C;--line:#0E0E0C;--ball:#D8FF2E;--clay:#D2552B;--hard:#2A5BD7;--grass:#1F7A4D;--muted:#6B6A63;--r:18px;
+--display:"Inter Tight","Noto Sans JP",sans-serif;--mono:"JetBrains Mono","Noto Sans JP",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0}
+html{background:var(--chalk);color:var(--ink);font-family:"Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:var(--chalk);border-bottom:2px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:28px;height:60px}
+.logo{font-family:var(--display);font-weight:900;letter-spacing:-.02em;font-size:20px;display:flex;align-items:center;gap:8px}
+.logo i{width:14px;height:14px;border-radius:50%;background:var(--ball);border:2px solid var(--ink);display:inline-block}
+nav{display:flex;gap:22px;font-family:var(--mono);font-size:13px;text-transform:uppercase}
+nav a{position:relative}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+nav a:hover::after{transform:scaleX(1)}
+.kbd{margin-left:auto;font-family:var(--mono);font-size:12px;border:2px solid var(--ink);border-radius:8px;padding:4px 10px;box-shadow:3px 3px 0 var(--ink)}
+.hero{padding:72px 0 0;border-bottom:2px solid var(--line);overflow:hidden}
+.eyebrow{font-family:var(--mono);font-size:13px;color:var(--muted);letter-spacing:.06em}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(56px,10vw,150px);line-height:.92;letter-spacing:-.045em;margin:18px 0 0}
+.rot{display:inline-block;height:.95em;overflow:hidden;vertical-align:bottom}
+.rot span{display:block;animation:rot 9s cubic-bezier(.7,0,.2,1) infinite}
+.rot b{display:block;height:.95em;line-height:.95em;background:var(--ball);padding:0 .08em}
+@keyframes rot{0%,18%{transform:translateY(0)}25%,43%{transform:translateY(-.95em)}50%,68%{transform:translateY(-1.9em)}75%,93%{transform:translateY(-2.85em)}100%{transform:translateY(-3.8em)}}
+.hero p.lead{font-size:clamp(17px,1.6vw,21px);font-weight:700;margin-top:28px;max-width:34em;line-height:1.7}
+.marquee{margin-top:44px;border-top:2px solid var(--line);white-space:nowrap;overflow:hidden;font-family:var(--mono);font-size:14px;padding:10px 0;background:var(--ink);color:var(--chalk)}
+.marquee div{display:inline-block;animation:mq 40s linear infinite}
+.marquee em{font-style:normal;color:var(--ball);margin:0 18px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:150px;gap:14px;padding:40px 0 80px}
+.card{position:relative;border:2px solid var(--ink);border-radius:var(--r);background:#fff;padding:22px;overflow:hidden;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s cubic-bezier(.2,.8,.2,1)}
+.card:hover{transform:translate(-4px,-4px);box-shadow:6px 6px 0 var(--ink)}
+.tag{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;border:1.5px solid currentColor;border-radius:99px;padding:3px 9px;display:inline-block}
+.card h3{font-family:var(--display);font-weight:900;font-size:26px;line-height:1.2;letter-spacing:-.02em;margin-top:12px}
+.card p{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.6}
+.meta{position:absolute;left:22px;bottom:18px;font-family:var(--mono);font-size:12px}
+.arrow{position:absolute;right:18px;bottom:14px;font-size:26px;transition:transform .25s}
+.card:hover .arrow{transform:translate(4px,-4px) rotate(-45deg)}
+.c-feature{grid-column:span 7;grid-row:span 3;background:var(--grass);color:var(--chalk)}
+.c-feature p,.c-feature .meta{color:#d7e8dc}.c-feature p{max-width:22em}
+.c-feature h3{font-size:36px;max-width:12em}
+.court{position:absolute;right:-6px;bottom:-6px;width:52%}
+.court .lines{stroke:var(--chalk);stroke-width:2;fill:none}
+.court .path{stroke:var(--ball);stroke-width:3;fill:none;stroke-dasharray:6 7}
+.court .p{fill:var(--chalk);stroke:var(--ink);stroke-width:2}
+.court .o{fill:var(--clay)}
+.court .ball{fill:var(--ball);stroke:var(--ink);stroke-width:1.5;offset-path:path("M70 230 Q 180 60 300 120");animation:fly 2.8s cubic-bezier(.4,0,.2,1) infinite}
+.c-feature:hover .ball{animation-duration:1.4s}
+@keyframes fly{0%{offset-distance:0%}70%,100%{offset-distance:100%}}
+.pmove{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.c-feature:hover .pmove{transform:translate(70px,-40px)}
+.c-stat{grid-column:span 5;grid-row:span 2;background:var(--ink);color:var(--chalk)}
+.big{font-family:var(--display);font-weight:900;font-size:96px;letter-spacing:-.05em;line-height:1;margin-top:8px}
+.big small{font-size:28px;color:var(--ball)}
+.c-stat p{color:#b8b6ad}
+.bar{height:10px;border-radius:99px;background:#2b2b28;margin-top:14px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--ball);transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar.in i{width:68%}
+.c-form{grid-column:span 5;background:var(--ball)}
+.c-form h3{font-size:22px;margin-top:8px}
+.c-clay{grid-column:span 4;grid-row:span 2;background:var(--clay);color:var(--chalk)}
+.c-clay p,.c-clay .meta{color:#ffe3d6}
+.c-hard{grid-column:span 4;grid-row:span 2;background:var(--hard);color:var(--chalk)}
+.c-hard p,.c-hard .meta{color:#dbe4ff}
+.c-drill{grid-column:span 4;grid-row:span 2}
+.c-glossary{grid-column:span 8;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:13px;border:2px solid var(--ink);border-radius:10px;padding:6px 12px;transition:background .15s,transform .15s}
+.chip:hover{background:var(--ball);transform:rotate(-2deg)}
+.c-news{grid-column:span 4;background:var(--chalk)}
+.dot{width:8px;height:8px;background:#e5322d;border-radius:50%;display:inline-block;margin-right:6px;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.25}}
+footer{border-top:2px solid var(--line);padding:28px 0;font-family:var(--mono);font-size:12px;color:var(--muted)}
+@media (max-width:860px){.bento{grid-template-columns:1fr;grid-auto-rows:auto}.bento>.card{grid-column:auto;grid-row:auto;min-height:180px}.c-feature{min-height:440px}nav{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#"><i></i>DOUBLES&nbsp;LABO</a>
+<nav><a href="#">Formations</a><a href="#">Pro Breakdown</a><a href="#">Drills</a><a href="#">Glossary</a></nav>
+<span class="kbd">⌘K 戦術を検索</span>
+</div></header>
+<section class="hero"><div class="wrap">
+<div class="eyebrow">// WORLD DOUBLES TACTICS — JA EDITION</div>
+<h1>世界の<span class="rot"><span><b>POACH.</b><b>I-FORM.</b><b>STACK.</b><b>2-BACK.</b><b>POACH.</b></span></span><br>を、図で読む。</h1>
+<p class="lead">ツアーのダブルスで使われている戦術を、コート図とデータで解説します。週末プレーヤーが次の試合で試せるところまで落とし込みます。</p>
+</div>
+<div class="marquee"><div>雁行陣 <em>●</em> 平行陣 <em>●</em> I-フォーメーション <em>●</em> オーストラリアン <em>●</em> ポーチ <em>●</em> ステイ・フェイク <em>●</em> センターセオリー <em>●</em> 2バック <em>●</em> 雁行陣 <em>●</em> 平行陣 <em>●</em> I-フォーメーション <em>●</em> オーストラリアン <em>●</em> ポーチ <em>●</em> ステイ・フェイク <em>●</em> センターセオリー <em>●</em> 2バック <em>●</em></div></div>
+</section>
+<main class="wrap"><section class="bento">
+<a class="card c-feature" href="#"><span class="tag">Pro Breakdown</span>
+<h3>ツアー上位ペアは、なぜ1stサーブ後に「I」を選ぶのか</h3>
+<p>サーブ後の前衛の動きと、リターンのコースを図で追います。</p>
+<span class="meta">12 MIN READ · 戦術図 4</span>
+<svg class="court" viewBox="0 0 400 300" aria-hidden="true">
+<g class="lines"><rect x="20" y="20" width="360" height="260"/><line x1="20" y1="150" x2="380" y2="150" stroke-width="4"/><line x1="60" y1="20" x2="60" y2="280"/><line x1="340" y1="20" x2="340" y2="280"/><line x1="60" y1="85" x2="340" y2="85"/><line x1="60" y1="215" x2="340" y2="215"/><line x1="200" y1="85" x2="200" y2="215"/></g>
+<path class="path" d="M70 230 Q 180 60 300 120"/>
+<circle class="p" cx="80" cy="262" r="11"/><g class="pmove"><circle class="p" cx="200" cy="190" r="11"/></g>
+<circle class="p o" cx="140" cy="40" r="11"/><circle class="p o" cx="270" cy="110" r="11"/>
+<circle class="ball" r="7"/></svg></a>
+<a class="card c-stat" href="#"><span class="tag" style="color:var(--ball)">Data</span>
+<div class="big">68<small>%</small></div>
+<p>サーブ側が3球目までにポイントを決める割合（ダミー値）</p><div class="bar"><i></i></div></a>
+<a class="card c-form" href="#"><span class="tag">Formation 01</span><h3>雁行陣 vs 平行陣、いつ切り替える？</h3><span class="arrow">→</span></a>
+<a class="card c-clay" href="#"><span class="tag">Clay</span><h3>クレーで2バックが増える理由</h3><p>ローランギャロスのダブルスに多い守備陣形を分析。</p><span class="meta">8 MIN</span><span class="arrow">→</span></a>
+<a class="card c-hard" href="#"><span class="tag">Hard</span><h3>センターセオリーの最新形</h3><p>速いコートで、真ん中への配球が効く理由。</p><span class="meta">6 MIN</span><span class="arrow">→</span></a>
+<a class="card c-drill" href="#"><span class="tag">Drill</span><h3>ポーチの一歩目を速くする4人ドリル</h3><p>週末の90分練習に組み込める形にしています。</p><span class="meta">4人 · 15 MIN</span><span class="arrow">→</span></a>
+<div class="card c-glossary"><span class="tag">Glossary</span><a class="chip" href="#">ポーチ</a><a class="chip" href="#">ステイ</a><a class="chip" href="#">フェイク</a><a class="chip" href="#">チェンジ</a><a class="chip" href="#">ロブ&amp;ダッシュ</a><a class="chip" href="#">アングルボレー</a><a class="chip" href="#">+48</a></div>
+<a class="card c-news" href="#"><span class="tag"><span class="dot"></span>This Week</span><h3 style="font-size:19px">今週のツアーダブルス：注目の3ポイント</h3></a>
+</section></main>
+<footer><div class="wrap">© DOUBLES LABO — 原文のコピーはせず、要約と出典リンクで紹介しています。</div></footer>
+<script>const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.5});document.querySelectorAll('.bar').forEach(b=>io.observe(b));</script>
+</body></html>

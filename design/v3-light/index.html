@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Doubles Labo — 世界のダブルスの知見を、日本語で。</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBFBFA;--card:#fff;--line:#ECEBE8;--line2:#DEDCD7;--text:#0B0B0C;--sub:#5F6066;--dim:#9A9BA1;
+--blue:#2D5BFF;--blue-soft:#EEF2FF;--ball:#D7F64A;--sh:0 1px 2px rgba(16,16,20,.04),0 8px 24px -12px rgba(16,16,20,.10);
+--sans:"Geist","Noto Sans JP",system-ui,sans-serif;--mono:"Geist Mono","Noto Sans JP",ui-monospace,monospace;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0}
+html{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:20;background:rgba(251,251,250,.8);backdrop-filter:blur(12px) saturate(1.6);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;height:60px;gap:32px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:600;font-size:15px;letter-spacing:-.01em}
+.logo i{width:20px;height:20px;border-radius:50%;background:var(--ball);box-shadow:inset 0 0 0 1.5px var(--text);position:relative;overflow:hidden}
+.logo i::before,.logo i::after{content:"";position:absolute;top:-2px;bottom:-2px;width:12px;border:1.5px solid var(--text);border-radius:50%}
+.logo i::before{left:-8px}.logo i::after{right:-8px}
+nav{display:flex;gap:22px;font-size:13.5px;color:var(--sub)}
+nav a{transition:color .15s}nav a:hover{color:var(--text)}
+.right{margin-left:auto;display:flex;gap:10px;align-items:center}
+.search{font-size:13px;color:var(--dim);background:#fff;border:1px solid var(--line2);border-radius:9px;padding:6px 8px 6px 12px;display:flex;gap:28px;align-items:center;transition:border-color .2s,box-shadow .2s}
+.search:hover{border-color:#c9c7c1;box-shadow:var(--sh)}
+.search kbd{font-family:var(--mono);font-size:11px;color:var(--sub);background:var(--bg);border:1px solid var(--line2);border-radius:5px;padding:1px 6px}
+.btn{font-family:inherit;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500;background:var(--text);color:#fff;border-radius:9px;padding:8px 14px;transition:transform .15s,box-shadow .2s,background .2s}
+.btn:hover{box-shadow:0 6px 18px -6px rgba(11,11,12,.45)}
+.btn:active{transform:scale(.97)}
+.btn .ar{transition:transform .2s var(--ease)}.btn:hover .ar{transform:translateX(3px)}
+.btn.light{background:#fff;color:var(--text);box-shadow:inset 0 0 0 1px var(--line2)}
+.btn.light:hover{box-shadow:inset 0 0 0 1px #c9c7c1,var(--sh)}
+/* hero */
+.hero{padding:84px 0 56px;display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--sub);background:#fff;border:1px solid var(--line2);border-radius:99px;padding:4px 12px 4px 4px}
+.badge b{white-space:nowrap;flex-shrink:0;font-weight:500;font-size:11px;color:var(--blue);background:var(--blue-soft);border-radius:99px;padding:2px 8px}
+h1{font-size:clamp(40px,5.4vw,68px);font-weight:600;letter-spacing:-.045em;line-height:1.1;margin-top:22px}
+h1 .w{display:inline-block;opacity:0;transform:translateY(.3em);animation:in .8s var(--ease) forwards}
+h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--ball) 62%,var(--ball) 92%,transparent 92%)}
+@keyframes in{to{opacity:1;transform:none}}
+.lead{color:var(--sub);font-size:17px;line-height:1.85;margin-top:22px;max-width:30em;opacity:0;animation:in .8s .45s forwards}
+.cta{display:flex;gap:10px;margin-top:30px;opacity:0;animation:in .8s .6s forwards}
+.cta .btn{font-size:14.5px;padding:11px 18px;border-radius:10px}
+.stats{display:flex;gap:32px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line);opacity:0;animation:in .8s .75s forwards}
+.stats div{font-size:12.5px;color:var(--sub)}
+.stats b{display:block;font-size:24px;font-weight:600;color:var(--text);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+/* hero visual */
+.visual{position:relative;aspect-ratio:5/4;opacity:0;animation:in 1s .3s var(--ease) forwards}
+.photo{position:absolute;inset:0;border-radius:22px;background:linear-gradient(135deg,#dfe8ff,#f4f8ff) center/cover;box-shadow:0 30px 60px -30px rgba(30,50,120,.35);overflow:hidden}
+.float{position:absolute;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);border-radius:14px;box-shadow:0 12px 32px -12px rgba(16,16,20,.25);padding:12px 14px;font-size:12.5px;animation:bob 6s ease-in-out infinite}
+.float .t{font-family:var(--mono);font-size:10.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+.float .v{font-weight:600;margin-top:4px;font-size:13.5px}
+.f1{left:-28px;bottom:42px;width:240px}
+.f2{right:-20px;top:28px;animation-delay:-2s}
+.f3{right:28px;bottom:-22px;animation-delay:-4s;display:flex;gap:10px;align-items:center}
+.f1 .row{display:flex;gap:6px;margin-top:8px}
+.chip{font-size:11px;border-radius:6px;padding:2px 7px;background:var(--blue-soft);color:var(--blue)}
+.chip.g{background:#F1F5E1;color:#4F6B00}
+.dot{width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.15)}
+@keyframes bob{50%{transform:translateY(-6px)}}
+/* sources strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.strip .wrap{display:flex;align-items:center;gap:36px;height:64px;font-size:13px;color:var(--dim);overflow:hidden;white-space:nowrap}
+.strip b{font-weight:500;color:var(--sub);font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em}
+.strip span{transition:color .2s}.strip span:hover{color:var(--text)}
+/* section */
+.sh{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:80px 0 22px;flex-wrap:wrap}
+.sh h2{font-size:30px;font-weight:600;letter-spacing:-.035em}
+.sh p{color:var(--sub);font-size:14.5px;margin-top:6px}
+/* segmented */
+.seg{position:relative;display:inline-flex;background:#F1F0ED;border-radius:10px;padding:3px}
+.seg button{position:relative;z-index:1;border:0;background:none;font:inherit;font-size:13px;color:var(--sub);padding:6px 13px;border-radius:8px;cursor:pointer;transition:color .2s}
+.seg button.on{color:var(--text)}
+.seg .pill{position:absolute;top:3px;bottom:3px;background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:left .35s var(--ease),width .35s var(--ease)}
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s,opacity .35s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(16,16,20,.22);border-color:var(--line2)}
+.card.hide{display:none}
+.thumb{aspect-ratio:16/10;background:linear-gradient(135deg,#e6edff,#f6f8ff) center/cover;overflow:hidden;position:relative}
+.thumb::after{content:"";position:absolute;inset:0;background:inherit;background-size:cover;transition:transform 1s var(--ease)}
+.card:hover .thumb::after{transform:scale(1.05)}
+.body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.meta{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--dim)}
+.cat{font-size:11.5px;font-weight:500;border-radius:6px;padding:2px 8px}
+.c-tac{background:var(--blue-soft);color:var(--blue)}.c-drl{background:#F1F5E1;color:#4F6B00}.c-phy{background:#FFF1EA;color:#C2410C}.c-men{background:#F4EEFF;color:#6D28D9}
+.card h3{font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.5}
+.card p{font-size:13.5px;color:var(--sub);line-height:1.75}
+.foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px dashed var(--line);font-size:12px;color:var(--dim)}
+.foot .src{font-family:var(--mono)}
+.feature{grid-column:span 2;flex-direction:row}
+.feature .thumb{aspect-ratio:auto;flex:1.15}
+.feature .body{flex:1;padding:28px}
+.feature h3{font-size:24px;line-height:1.4}
+.text-only .body{padding:22px}
+.text-only h3{font-size:18px}
+/* how */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;position:relative;overflow:hidden}
+.step .n{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.step h3{font-size:17px;font-weight:600;margin-top:28px;letter-spacing:-.02em}
+.step p{font-size:13.5px;color:var(--sub);line-height:1.75;margin-top:8px}
+.ico{position:absolute;top:20px;right:20px;width:40px;height:40px;border-radius:11px;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;transition:transform .4s var(--ease),background .3s}
+.step:hover .ico{transform:rotate(-8deg) scale(1.08);background:var(--ball)}
+/* newsletter */
+.nl{margin-top:80px;border-radius:24px;padding:56px;background:radial-gradient(60% 120% at 0% 0%,#E8EEFF,transparent 60%),radial-gradient(50% 100% at 100% 100%,#F3FAD2,transparent 60%),#fff;border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.nl h2{font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:-.035em;line-height:1.3}
+.nl p{color:var(--sub);margin-top:10px;font-size:15px}
+.form{display:flex;gap:8px;background:#fff;border:1px solid var(--line2);border-radius:12px;padding:5px;box-shadow:var(--sh)}
+.form input{border:0;outline:0;font:inherit;font-size:14px;padding:0 10px;width:240px;background:transparent}
+footer{margin-top:80px;border-top:1px solid var(--line);padding:32px 0 48px;color:var(--dim);font-size:12.5px;display:flex}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:920px){nav,.search{display:none}.hero{grid-template-columns:1fr;padding-top:48px;gap:48px}.grid,.how{grid-template-columns:1fr}.feature{grid-column:auto;flex-direction:column}.feature .thumb{aspect-ratio:16/10}.f1{left:8px;width:220px}.f2{right:8px}.nl{padding:32px}.form input{width:100%}.seg{overflow-x:auto;max-width:100%}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="logo" href="#"><i></i>Doubles Labo</a>
+ <nav><a href="#">戦術</a><a href="#">練習ドリル</a><a href="#">フィジカル</a><a href="#">メンタル</a><a href="#">用語集</a></nav>
+ <div class="right"><span class="search">記事を検索 <kbd>⌘K</kbd></span><a class="btn" href="#">ニュースレター</a></div>
+</div></header>
+
+<main class="wrap">
+<section class="hero">
+ <div>
+  <a class="badge" href="#"><b>今週</b>海外コーチの新しい記事を12本要約しました →</a>
+  <h1 id="h1">世界のダブルスの<br><em>最新の知見</em>を、<br>日本語で。</h1>
+  <p class="lead">アメリカ、スペイン、オーストラリアなど、海外のコーチやポッドキャストの発信から、ダブルスの戦術と練習法を毎日集めて要約しています。すべての記事に出典リンクを付けています。</p>
+  <div class="cta"><a class="btn" href="#">最新記事を読む <span class="ar">→</span></a><a class="btn light" href="#">サイトについて</a></div>
+  <div class="stats"><div><b data-count="24">0</b>海外の情報源</div><div><b data-count="6">0</b>カ国</div><div><b data-count="3">0</b>毎日の更新本数</div></div>
+ </div>
+ <div class="visual">
+  <div class="photo" style="background-image:url(img/1.jpg)"></div>
+  <div class="float f1"><div class="t">Summary · 4 min</div><div class="v">前衛は「打った瞬間」ではなく「相手が構えた瞬間」に動く</div><div class="row"><span class="chip">戦術</span><span class="chip g">中級〜</span></div></div>
+  <div class="float f2"><div class="t">Source</div><div class="v">US · Coaching podcast</div></div>
+  <div class="float f3"><span class="dot"></span><span><b>3本</b> の新着を今朝追加</span></div>
+ </div>
+</section>
+</main>
+
+<div class="strip"><div class="wrap"><b>情報源の国</b><span>United States</span><span>Spain</span><span>Australia</span><span>United Kingdom</span><span>Argentina</span><span>Sweden</span><span>Canada</span></div></div>
+
+<main class="wrap">
+ <div class="sh reveal"><div><h2>最新の記事</h2><p>海外の発信を要約して、試合で使えるところまでまとめています。</p></div>
+  <div class="seg" id="seg"><span class="pill"></span><button class="on" data-f="all">すべて</button><button data-f="tac">戦術</button><button data-f="drl">練習</button><button data-f="phy">フィジカル</button><button data-f="men">メンタル</button></div></div>
+ <section class="grid" id="grid">
+  <a class="card feature reveal" data-c="tac" href="#"><div class="thumb" style="background-image:url(img/2.jpg)"></div>
+   <div class="body"><div class="meta"><span class="cat c-tac">戦術</span><span>今日</span></div>
+   <h3>リターンゲームで先に前へ出る：海外コーチが勧める「2人で詰める」タイミング</h3>
+   <p>リターン側のペアが主導権を取るための立ち位置と、前に出るきっかけを3つのパターンで整理しました。</p>
+   <div class="foot"><span class="src">US · Coaching blog</span><span>5分で読める</span></div></div></a>
+  <a class="card reveal" data-c="drl" href="#"><div class="thumb" style="background-image:url(img/3.jpg)"></div>
+   <div class="body"><div class="meta"><span class="cat c-drl">練習</span><span>昨日</span></div><h3>4人・15分で回せるボレー連続ドリル</h3><p>スペインのアカデミーで定番の球出し練習を、週末の練習に合わせて組み直しました。</p>
+   <div class="foot"><span class="src">ES · Academy video</span><span>3分</span></div></div></a>
+  <a class="card reveal" data-c="phy" href="#"><div class="thumb" style="background-image:url(img/4.jpg)"></div>
+   <div class="body"><div class="meta"><span class="cat c-phy">フィジカル</span><span>2日前</span></div><h3>40代からの横移動：ケガを防ぐ5分ウォームアップ</h3><p>オーストラリアのトレーナーが紹介した、試合前にできる簡単なメニュー。</p>
+   <div class="foot"><span class="src">AU · Podcast</span><span>4分</span></div></div></a>
+  <a class="card text-only reveal" data-c="men" href="#"><div class="body"><div class="meta"><span class="cat c-men">メンタル</span><span>3日前</span></div><h3>ペアと声をかけ合うと、ミスのあとの失点が減る理由</h3><p>イギリスのスポーツ心理の記事から、ポイント間のコミュニケーションの具体例を紹介。</p>
+   <div class="foot"><span class="src">UK · Article</span><span>4分</span></div></div></a>
+  <a class="card text-only reveal" data-c="tac" href="#"><div class="body"><div class="meta"><span class="cat c-tac">戦術</span><span>4日前</span></div><h3>ロブを上げられたときの「後衛カバー」の決め方</h3><p>アルゼンチンのコーチが解説する、ペアで事前に決めておく約束事。</p>
+   <div class="foot"><span class="src">AR · YouTube</span><span>3分</span></div></div></a>
+ </section>
+
+ <div class="sh reveal"><div><h2>記事ができるまで</h2><p>機械的に翻訳するのではなく、要点をまとめて出典を明記しています。</p></div></div>
+ <section class="how">
+  <div class="step reveal"><div class="ico">⌕</div><div class="n">01</div><h3>海外の発信を集める</h3><p>指導者のブログやポッドキャスト、動画から、ダブルスに関係する新しい発信を毎日集めます。</p></div>
+  <div class="step reveal"><div class="ico">✎</div><div class="n">02</div><h3>要点を日本語でまとめる</h3><p>原文をそのまま訳さず、試合や練習で使えるポイントにしぼって要約します。</p></div>
+  <div class="step reveal"><div class="ico">↗</div><div class="n">03</div><h3>出典にすぐ戻れる</h3><p>すべての記事に元の記事へのリンクを付けているので、詳しく知りたいときは原文を読めます。</p></div>
+ </section>
+
+ <section class="nl reveal"><div><h2>週に1回、<br>大事な記事だけをメールで。</h2><p>その週に読んでおきたい記事を3本選んで届けます。</p></div>
+  <form class="form" onsubmit="return false"><input type="email" placeholder="you@example.com"><button class="btn">登録する</button></form></section>
+</main>
+<footer><div class="wrap">© Doubles Labo · 原文はコピーせず、要約と出典リンクで紹介しています。</div></footer>
+<script>
+// 見出しを順番に表示
+const h=document.getElementById('h1');let i=0;
+h.querySelectorAll('br').forEach(b=>b.dataset.k=1);
+[...h.childNodes].forEach(n=>{if(n.nodeName==='BR')return;const s=document.createElement('span');s.className='w';s.style.animationDelay=(i++*0.12)+'s';h.replaceChild(s,n);s.appendChild(n)});
+// 数字のカウントアップ
+document.querySelectorAll('[data-count]').forEach(el=>{const to=+el.dataset.count;let t0;const f=t=>{t0??=t;const p=Math.min((t-t0)/1200,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));p<1&&requestAnimationFrame(f)};setTimeout(()=>requestAnimationFrame(f),800)});
+// スクロールで表示
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// カテゴリの切り替え
+const seg=document.getElementById('seg'),pill=seg.querySelector('.pill');
+const move=b=>{pill.style.left=b.offsetLeft+'px';pill.style.width=b.offsetWidth+'px'};
+move(seg.querySelector('.on'));
+seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{seg.querySelector('.on').classList.remove('on');b.classList.add('on');move(b);
+ document.querySelectorAll('#grid .card').forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.c!==b.dataset.f))});
+</script>
+</body></html>
