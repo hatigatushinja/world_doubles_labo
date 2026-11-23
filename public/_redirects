@@ -1,1 +1,3 @@
-# ルートはリダイレクトせず index.html（Search Console の確認タグ入り）を返す。index.html から /ja/ へ移動する
+# ルートはリダイレクトせず index.html（Search Console の確認タグ入り）を返す
+/ja/articles/2026-11-23-jamie-murray-net-player-textbook/ /ja/articles/2026-11-23-tennis-doubles-net-player-position-movement/ 301
+/ja/articles/2026-11-23-jamie-murray-net-player-textbook /ja/articles/2026-11-23-tennis-doubles-net-player-position-movement/ 301

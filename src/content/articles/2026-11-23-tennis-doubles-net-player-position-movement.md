@@ -1,27 +1,43 @@
 ---
-title: "元ダブルス世界1位ジェイミー・マレーが教える「前衛の教科書」：立ち位置・ポーチ・Iフォーメーション・サインまで"
+title: "元ダブルス世界1位が教えるテニス前衛の立ち位置と動き方｜ポーチ・Iフォーメーション・サイン【マレー直伝】"
 date: "2026-11-23T21:30:00+09:00"
 category: "tactics"
-tags: ["ジェイミー・マレー","前衛","ポーチ","Iフォーメーション","ハンドサイン","サービスゲーム"]
+tags: ["前衛","立ち位置","動き方","ポーチ","Iフォーメーション","サイン","ジェイミー・マレー"]
 source: "Jamie Murray（YouTube）"
 sourceUrl: "https://www.youtube.com/watch?v=OVBPyCIoIDc"
-image: "/images/articles/2026-11-23-jamie-murray-net-player-textbook.jpg"
-summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説した5本の動画を、日本語で1本にまとめました。サーバーのパートナー（前衛）が「何を考え、どこへ動くか」がこれで全部わかります。"
+image: "/images/articles/2026-11-23-tennis-doubles-net-player-position-movement.jpg"
+summary: "テニスダブルスの前衛の立ち位置と動き方を、元ダブルス世界1位ジェイミー・マレーの解説5本から図解。構え方、守備範囲、ポーチのタイミング、Iフォーメーション、サインの種類まで、次の試合からすぐ使えるポイントを紹介します。"
 ---
+テニスのダブルスで前衛の立ち位置と動き方に迷ったら、元ダブルス世界1位ジェイミー・マレーの考え方が近道です。「どこに立てばいいのか」「いつ動けばいいのか」の答えを、本人の解説動画5本から図でまとめました。
+
+<div class="summary-box"><div class="sb-head"><span class="sb-tag">結論</span>この記事のポイント</div>
+<ol class="sb-list">
+<li><span class="sb-k">立ち位置</span><span class="sb-v">外側の足をサービスボックスの真ん中に置いて構え、サーブのコースに合わせて前へ動く</span></li>
+<li><span class="sb-k">最優先</span><span class="sb-v">ストレートで抜かれないこと。そのうえで、リターンにできるだけ多く触る</span></li>
+<li><span class="sb-k">ポーチ</span><span class="sb-v">ペアで決めて出るか、相手が苦しいと読めたときに出る。体はずっとコートに向けたまま</span></li>
+</ol></div>
+
 ジェイミー・マレーは、ダブルスで世界ランキング1位になったイギリスの選手です。弟はシングルスの元世界1位、アンディ・マレーです。
 
 ジェイミーは自分のYouTubeチャンネルで、ダブルスの戦術を解説しています。この記事では、そのうち<strong>サーバーのパートナー（前衛）</strong>についての5本の動画を、日本語で1本にまとめました。
 
+## テニスダブルスの前衛とは？役割をひと言で
+
+前衛とは、ダブルスでネットの近くに立つ選手のことです。この記事では、自分のペアがサーブを打つときの前衛（サーバーのパートナー）を扱います。
+
+マレーの答えはシンプルで、前衛の役割は「<strong>リターンにできるだけ多く触って、サービスゲームをキープすること</strong>」です。
+
 サービスゲームでの前衛の考え方と動き方を、この順番で紹介します。
 
-1. 前衛の役割と立ち位置
-2. ポーチの出方
+1. 前衛の立ち位置と構え方、守備範囲
+2. ポーチのタイミングと出方
 3. Iフォーメーション
-4. ペアのハンドサイン
+4. ダブルスのサインの種類
+5. よくある質問
 
 動画はどれも数分の短いものです。気になるところは、記事の中の動画でも確認できます。
 
-## 1. 前衛の役割：「リターンにできるだけ多く触る」
+## 1. 前衛の立ち位置と構え方：「リターンにできるだけ多く触る」
 
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/OVBPyCIoIDc" title="Territory in Doubles | Jamie Murray" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -31,7 +47,7 @@ summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説
 
 > サーバーのパートナーとしての目標は、リターンにできるだけ多く触ること。
 
-### スタートの位置と、サーブごとの移動先
+### 前衛の立ち位置と、サーブごとの動き方
 
 - <strong>スタート:</strong> 外側の足を、サービスボックスのちょうど真ん中に置く
 - <strong>ワイドへのサーブ:</strong> 緑のコーンの位置へ動く
@@ -49,7 +65,7 @@ summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説
 <text x="150" y="405" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">スタート：外側の足をボックスの真ん中に</text>
 <rect x="55" y="459" width="190" height="22" rx="11" fill="#fff"/><text x="150" y="474" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0B0B0C">最優先：ストレートで抜かれない</text></svg><figcaption><b>図1</b> サーバー（サ）がデュースサイドから打つとき、前衛（前）のスタート位置と、サーブのコースごとの移動先。赤の点線は、リターン（リ）からのストレート。コーンの位置は目安です。（動画の内容をもとに編集部作成）</figcaption></figure>
 
-### 最優先は「ストレートで抜かれないこと」
+### 前衛の守備範囲：最優先は「ストレートで抜かれないこと」
 
 マレーは「前衛の最初のロジックは、ストレートで抜かれないこと」だと話しています。ワイドなら緑、センターなら黄色へ動くのは、それぞれの場合にストレートのリターンをカバーできる位置だからです。
 
@@ -73,7 +89,7 @@ summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説
 
 マレーのまとめは「正しい位置に前進し、できるだけ多く触る。触れなかったら戻って、ポイントを続ける」です。
 
-## 2. ポーチの出方
+## 2. ポーチのタイミングと出方
 
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/zSd7OxGhpqs" title="Learn to Poach in Doubles | Jamie Murray" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -105,6 +121,14 @@ summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説
 <rect x="50" y="439" width="200" height="22" rx="11" fill="#fff"/><text x="150" y="454" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0B0B0C">体はずっとコートに向けたまま</text>
 <text x="150" y="480" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">背中を向けると逆を突かれた球が取れない</text></svg><figcaption><b>図2</b> ポーチの動き。体をコートに向けたまま、外側の足がセンターラインに乗る位置まで出る。センターへのサーブのときは、目指す位置が少し変わります。（動画の内容をもとに編集部作成）</figcaption></figure>
 
+### ポーチに出れない人へ（編集部より）
+
+ここは編集部の補足で、マレーの動画にはない内容です。「怖くてポーチに出られない」という人は、まず<strong>ペアで事前に決めて出るポーチ</strong>から始めるのがおすすめです。出ると決めておけば、迷いがなくなります。
+
+相手のどのショットなら出ていいのかは、全米テニス協会（USTA）の判断基準が参考になります。
+
+→ <a href="/ja/articles/2026-11-23-usta-poaching-in-doubles/">ポーチに出るかは「相手がどこから、どう打つか」で決める：USTAの4つの判断基準</a>
+
 ### マレーの練習法
 
 2人で練習するときは、パートナーに次のように球出ししてもらうそうです。
@@ -117,7 +141,7 @@ summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説
 
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/9PKbwkMgmvs" title="When Should You Poach? | Jamie Murray" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-## 3. Iフォーメーション：動きを隠して、ストレートに打たせる
+## 3. Iフォーメーションとは：動きを隠して、ストレートに打たせる
 
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/KlbA7kajPdE" title="How to do I-Formation | Jamie Murray" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -148,7 +172,7 @@ Iフォーメーションは、前衛がセンターライン上に構える陣�
 
 マレーはこうまとめています。相手のリターン側の前衛がうまく、ファーストボレーにプレッシャーをかけてくるときにも有効です。リターンがストレートに来れば、相手前衛のプレッシャーを受けずにファーストボレーを打てるからです。
 
-## 4. ハンドサイン：ペアで「サーブのコース」と「前衛の動き」をそろえる
+## 4. ダブルスのサインの種類：ペアで「サーブのコース」と「前衛の動き」をそろえる
 
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/E3clvOcEG30" title="Communication in Doubles - Hand Signals | Bruno Soares & Jamie Murray" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -160,6 +184,28 @@ Iフォーメーションは、前衛がセンターライン上に構える陣�
 <figure class="fig"><div class="matrix signs"><div class="m stay"><b>センター</b><span>指でコースを示す</span></div><div class="m stay"><b>ワイド</b><span>指でコースを示す</span></div><div class="m stay"><b>ボディ</b><span>どちらのサイドでも中指</span></div><div class="m go"><b>ポーチ（クロス）</b><span>前衛が動く</span></div><div class="m warn"><b>ステイ</b><span>こぶし</span></div></div><figcaption><b>図4</b> ソアレス＆マレーが使う5つのハンドサイン。サーブのコース3つと、前衛の動き2つ。指の形の細かいところは動画で確認してください。（動画の内容をもとに編集部作成）</figcaption></figure>
 
 サインを決めておくと、サーブのコースと前衛の動きがペアで一致します。1〜3の動きは、全部このサインの上に成り立っています。
+
+## よくある質問
+
+### Q. ダブルスの前衛はどこに立てばいい？
+
+A. マレーは、外側の足をサービスボックスの真ん中に置くところから始めます。サーブがワイドならサイド寄りへ、センターや体へのサーブなら真ん中寄りへ、斜め前に動きます（図1）。
+
+### Q. 前衛が一番気をつけることは？
+
+A. ストレートで抜かれないことです。そのうえで、リターンにできるだけ多く触ることを目指します。触れなかったら、斜め後ろに戻ってニュートラルな位置で構え直します。
+
+### Q. ポーチに出るタイミングは？
+
+A. ペアで事前に決めたときと、パートナーのいいサーブで相手が苦しい体勢になったときです。相手がクロスにしか打てないと読めたら出ます。
+
+### Q. Iフォーメーションとは？
+
+A. 前衛がセンターライン上に構える陣形です。どちらに動くかを隠すことで、相手にストレートへの難しいリターンを打たせます。
+
+### Q. ダブルスのサインには、どんな種類がある？
+
+A. マレーとソアレスのペアは5つです。サーブのコース3つ（センター・ワイド・ボディ）と、前衛の動き2つ（ポーチかステイか）です。
 
 ## 週末プレーヤーへのヒント
 
