@@ -5,6 +5,7 @@ category: "tactics"
 tags: ["ジェイミー・マレー","前衛","ポーチ","Iフォーメーション","ハンドサイン","サービスゲーム"]
 source: "Jamie Murray（YouTube）"
 sourceUrl: "https://www.youtube.com/watch?v=OVBPyCIoIDc"
+image: "/images/articles/2026-11-23-jamie-murray-net-player-textbook.jpg"
 summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説した5本の動画を、日本語で1本にまとめました。サーバーのパートナー（前衛）が「何を考え、どこへ動くか」がこれで全部わかります。"
 ---
 ジェイミー・マレーは、ダブルスで世界ランキング1位になったイギリスの選手です。弟はシングルスの元世界1位、アンディ・マレーです。
