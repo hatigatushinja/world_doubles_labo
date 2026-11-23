@@ -1,13 +1,15 @@
 ---
-title: "元ダブルス世界1位ジェイミー・マレーが教える「前衛の教科書」：立ち位置・ポーチ・Iフォーメーション・サインまで"
+title: "テニスダブルスの前衛の立ち位置と動き方｜元世界1位ジェイミー・マレーが教えるポーチ・Iフォーメーション・サイン"
 date: "2026-11-23T21:30:00+09:00"
 category: "tactics"
-tags: ["ジェイミー・マレー","前衛","ポーチ","Iフォーメーション","ハンドサイン","サービスゲーム"]
+tags: ["前衛","立ち位置","動き方","ポーチ","Iフォーメーション","サイン","ジェイミー・マレー"]
 source: "Jamie Murray（YouTube）"
 sourceUrl: "https://www.youtube.com/watch?v=OVBPyCIoIDc"
 image: "/images/articles/2026-11-23-jamie-murray-net-player-textbook.jpg"
-summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説した5本の動画を、日本語で1本にまとめました。サーバーのパートナー（前衛）が「何を考え、どこへ動くか」がこれで全部わかります。"
+summary: "ダブルスの前衛はどこに立ち、いつ動く？元世界1位ジェイミー・マレーの解説動画5本から、前衛の立ち位置と動き方、ポーチのタイミングと出方、Iフォーメーション、サインの種類を図付きでまとめました。"
 ---
+テニスのダブルスで前衛になると、「どこに立てばいいのか」「いつ動けばいいのか」で迷いがちです。この記事では、その答えを元ダブルス世界1位の解説から図でまとめました。
+
 ジェイミー・マレーは、ダブルスで世界ランキング1位になったイギリスの選手です。弟はシングルスの元世界1位、アンディ・マレーです。
 
 ジェイミーは自分のYouTubeチャンネルで、ダブルスの戦術を解説しています。この記事では、そのうち<strong>サーバーのパートナー（前衛）</strong>についての5本の動画を、日本語で1本にまとめました。
@@ -21,7 +23,7 @@ summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説
 
 動画はどれも数分の短いものです。気になるところは、記事の中の動画でも確認できます。
 
-## 1. 前衛の役割：「リターンにできるだけ多く触る」
+## 1. 前衛の役割と立ち位置：「リターンにできるだけ多く触る」
 
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/OVBPyCIoIDc" title="Territory in Doubles | Jamie Murray" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -31,7 +33,7 @@ summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説
 
 > サーバーのパートナーとしての目標は、リターンにできるだけ多く触ること。
 
-### スタートの位置と、サーブごとの移動先
+### 前衛の立ち位置と、サーブごとの動き方
 
 - <strong>スタート:</strong> 外側の足を、サービスボックスのちょうど真ん中に置く
 - <strong>ワイドへのサーブ:</strong> 緑のコーンの位置へ動く
@@ -73,7 +75,7 @@ summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説
 
 マレーのまとめは「正しい位置に前進し、できるだけ多く触る。触れなかったら戻って、ポイントを続ける」です。
 
-## 2. ポーチの出方
+## 2. ポーチのタイミングと出方
 
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/zSd7OxGhpqs" title="Learn to Poach in Doubles | Jamie Murray" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -117,7 +119,7 @@ summary: "ダブルス元世界1位のジェイミー・マレーが自ら解説
 
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/9PKbwkMgmvs" title="When Should You Poach? | Jamie Murray" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-## 3. Iフォーメーション：動きを隠して、ストレートに打たせる
+## 3. Iフォーメーションとは：動きを隠して、ストレートに打たせる
 
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/KlbA7kajPdE" title="How to do I-Formation | Jamie Murray" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -148,7 +150,7 @@ Iフォーメーションは、前衛がセンターライン上に構える陣�
 
 マレーはこうまとめています。相手のリターン側の前衛がうまく、ファーストボレーにプレッシャーをかけてくるときにも有効です。リターンがストレートに来れば、相手前衛のプレッシャーを受けずにファーストボレーを打てるからです。
 
-## 4. ハンドサイン：ペアで「サーブのコース」と「前衛の動き」をそろえる
+## 4. ダブルスのサインの種類：ペアで「サーブのコース」と「前衛の動き」をそろえる
 
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/E3clvOcEG30" title="Communication in Doubles - Hand Signals | Bruno Soares & Jamie Murray" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
