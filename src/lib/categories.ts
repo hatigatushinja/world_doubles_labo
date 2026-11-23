@@ -12,7 +12,7 @@ export const imageFor = (data: { image?: string; category?: string }) =>
   data.image || CATEGORY_IMAGES[data.category || "other"] || "/images/hero.jpg";
 
 // 日本語はおよそ1分500文字で計算
-export const readingMinutes = (body = "") => Math.max(1, Math.round(body.replace(/\s+/g, "").length / 500));
+export const readingMinutes = (body = "") => Math.max(1, Math.round(body.replace(/<svg[\s\S]*?<\/svg>/g, "").replace(/<[^>]+>/g, "").replace(/\s+/g, "").length / 500));
 
 export const relativeDate = (d: Date, now = new Date()) => {
   const days = Math.floor((now.valueOf() - d.valueOf()) / 86400000);
