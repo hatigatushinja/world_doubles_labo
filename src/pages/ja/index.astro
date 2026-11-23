@@ -11,7 +11,7 @@ const latest = articles[0];
 const weekAgo = Date.now() - 7 * 86400000;
 const thisWeek = articles.filter((a) => a.data.date.valueOf() >= weekAgo).length;
 const feeds = feedsConfig.feeds.map((f) => f.name);
-const cats = ["tactics", "technique", "practice", "fitness", "mindset"].filter((c) => articles.some((a) => a.data.category === c));
+const cats = ["feature", "tactics", "technique", "practice", "fitness", "mindset"].filter((c) => articles.some((a) => a.data.category === c));
 ---
 <Base>
   <div class="wrap">

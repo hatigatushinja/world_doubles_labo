@@ -71,7 +71,7 @@ a.float:hover{box-shadow:0 16px 40px -12px rgba(16,16,20,.35)}
 .body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
 .meta{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--dim)}
 .cat{font-size:11.5px;font-weight:500;border-radius:6px;padding:2px 8px;background:#F1F0ED;color:var(--sub)}
-.c-tactics{background:var(--blue-soft);color:var(--blue)}.c-practice{background:#F1F5E1;color:#4F6B00}.c-fitness{background:#FFF1EA;color:#C2410C}.c-mindset{background:#F4EEFF;color:#6D28D9}.c-technique{background:#E6F6F4;color:#0F766E}.c-gear{background:#FDF2F8;color:#BE185D}
+.c-feature{background:#0B0B0C;color:#fff}.c-tactics{background:var(--blue-soft);color:var(--blue)}.c-practice{background:#F1F5E1;color:#4F6B00}.c-fitness{background:#FFF1EA;color:#C2410C}.c-mindset{background:#F4EEFF;color:#6D28D9}.c-technique{background:#E6F6F4;color:#0F766E}.c-gear{background:#FDF2F8;color:#BE185D}
 .card h3{font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.5}
 .card p{font-size:13.5px;color:var(--sub);line-height:1.75}
 .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:12px;border-top:1px dashed var(--line);font-size:12px;color:var(--dim)}

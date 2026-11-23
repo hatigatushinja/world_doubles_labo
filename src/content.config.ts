@@ -7,7 +7,7 @@ const articles = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     summary: z.string().default(""),
-    category: z.enum(["tactics", "technique", "practice", "fitness", "gear", "mindset", "other"]).default("other"),
+    category: z.enum(["feature", "tactics", "technique", "practice", "fitness", "gear", "mindset", "other"]).default("other"),
     tags: z.array(z.string()).default([]),
     source: z.string().default(""),
     sourceUrl: z.string().optional(),
