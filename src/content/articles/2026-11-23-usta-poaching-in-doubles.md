@@ -18,7 +18,9 @@ summary: "全米テニス協会のコーチが、相手の打つ位置とショ�
 見るポイントは2つです。
 
 - 相手が**シングルスのサイドラインの内側**から打つのか、**外側**から打つのか
-- そのショットが**インサイドのストローク**か、**アウトサイドのストローク**か
+- そのショットが**インサイドのストローク（フォアハンド）**か、**アウトサイドのストローク（バックハンド）**か
+
+※動画の「inside stroke」はフォアハンド、「outside stroke」はバックハンドのことです（編集部注）。
 
 <figure class="fig"><svg viewBox="0 0 300 560" role="img" aria-label="相手がシングルスのサイドラインの内側から打つか外側から打つかの図"><defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0L10,5L0,10z" fill="#E5484D"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0L10,5L0,10z" fill="#6B6E76"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0L10,5L0,10z" fill="#2D5BFF"/></marker></defs><rect x="0" y="0" width="300" height="560" rx="14" fill="#5B8DD6"/><rect x="60" y="0" width="181" height="18" fill="#DCE8FF" opacity=".9"/><rect x="241" y="0" width="59" height="18" fill="#FFE1CC" opacity=".95"/><g fill="none" stroke="#fff" stroke-width="2"><rect x="30" y="18" width="241" height="523"/><line x1="60" y1="18" x2="60" y2="541"/><line x1="241" y1="18" x2="241" y2="541"/><line x1="60" y1="138.5" x2="241" y2="138.5"/><line x1="60" y1="420.5" x2="241" y2="420.5"/><line x1="150.5" y1="138.5" x2="150.5" y2="420.5"/></g><line x1="20" y1="279.5" x2="281" y2="279.5" stroke="#0B0B0C" stroke-width="3"/>
 <text x="150" y="12" text-anchor="middle" font-size="9" font-weight="700" fill="#1F3A7A">内側</text><text x="270" y="12" text-anchor="middle" font-size="9" font-weight="700" fill="#9A3B0C">外側</text>
@@ -26,29 +28,29 @@ summary: "全米テニス協会のコーチが、相手の打つ位置とショ�
 <path d="M262 30 L258 470" stroke="#E5484D" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
 <path d="M200 330 L150 300" stroke="#2D5BFF" stroke-width="3" fill="none" marker-end="url(#ab)"/>
 <circle cx="212" cy="30" r="10" fill="#0B0B0C" stroke="#fff" stroke-width="2"/><text x="212" y="34" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">相</text><circle cx="262" cy="30" r="10" fill="#0B0B0C" stroke="#fff" stroke-width="2"/><text x="262" y="34" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">相</text><circle cx="95" cy="235" r="10" fill="#0B0B0C" stroke="#fff" stroke-width="2"/><text x="95" y="239" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">相</text><circle cx="200" cy="335" r="10" fill="#2D5BFF" stroke="#fff" stroke-width="2"/><text x="200" y="339" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">前</text><circle cx="100" cy="540" r="10" fill="#2D5BFF" stroke="#fff" stroke-width="2"/><text x="100" y="544" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">後</text>
-</svg><figcaption><b>図1</b> 相手（黒）がシングルスのサイドラインの<b>内側</b>から打つか、<b>外側</b>から打つかを見る。グレーの点線がクロス、赤がストレート、青が前衛のポーチ。外側からはストレートが狙いやすい。（編集部作成）</figcaption></figure>
+</svg><figcaption><b>図1</b> 相手（黒）がシングルスのサイドラインの<b>内側</b>から打つか、<b>外側</b>から打つかを見る。グレーの点線がクロス、赤がストレート、青が前衛のポーチ。外側からはストレートが狙いやすい。相手のフォアかバックか（図2）とあわせて判断する。（編集部作成）</figcaption></figure>
 
 この組み合わせで、次の4つの場面に分けています。
 
-<figure class="fig"><div class="matrix"><div></div><div class="mh">インサイドのストローク</div><div class="mh">アウトサイドのストローク</div><div class="mh">外側から打つ</div><div class="m stay"><b>ステイ</b><span>1回だけ見せるのはあり</span></div><div class="m warn"><b>注意</b><span>ストレートを狙われやすい</span></div><div class="mh">内側から打つ</div><div class="m warn"><b>注意</b><span>パターンを読んで動く</span></div><div class="m go"><b>出る</b><span>待っていたチャンス</span></div></div><figcaption><b>図2</b> 相手が打つ位置（行）とショットの種類（列）で決める、USTAの4つの判断基準。（動画の内容を編集部が図にしたもの）</figcaption></figure>
+<figure class="fig"><div class="matrix"><div></div><div class="mh">フォアハンド<br><small>インサイド</small></div><div class="mh">バックハンド<br><small>アウトサイド</small></div><div class="mh">外側から打つ</div><div class="m stay"><b>ステイ</b><span>1回だけ見せるのはあり</span></div><div class="m warn"><b>注意</b><span>ストレートを狙われやすい</span></div><div class="mh">内側から打つ</div><div class="m warn"><b>注意</b><span>パターンを読んで動く</span></div><div class="m go"><b>出る</b><span>待っていたチャンス</span></div></div><figcaption><b>図2</b> 相手が打つ位置（行）とショットの種類（列）で決める、USTAの4つの判断基準。（動画の内容を編集部が図にしたもの）</figcaption></figure>
 
-### 1. 外側の位置から、インサイドのストローク → ほぼステイ
+### 1. 外側の位置から、フォアハンド → ほぼステイ
 
 基本的にはステイします。動くのは、相手の打つパターンが見えてポジションを変える理由ができたときか、**リズムを崩すために1回だけ**ポーチを見せるときです。
 
-ザイザー氏は「インサイドのストロークは危ない。打つ側が最後の瞬間にストレートへ引っ張る判断ができるからだ」と説明しています。
+ザイザー氏は「フォアハンド（インサイドのストローク）は危ない。打つ側が最後の瞬間にストレートへ引っ張る判断ができるからだ」と説明しています。
 
-### 2. 内側の位置から、インサイドのストローク → 注意
+### 2. 内側の位置から、フォアハンド → 注意
 
 ここは慎重に判断します。動画では「相手のパターンをつかんで、読みを入れて動こう」と勧めています。
 
-### 3. 外側の位置から、アウトサイドのストローク → 注意
+### 3. 外側の位置から、バックハンド → 注意
 
 ここも注意が必要な場面です。相手からはアレー（サイドの細い部分）がよく見えていて、ストレートを狙ってくる可能性が高いからです。
 
-### 4. 内側の位置から、アウトサイドのストローク → 出る
+### 4. 内側の位置から、バックハンド → 出る
 
-ザイザー氏は「ここが待っていたチャンスだ」と言い切っています。この形では、相手はボールの向きを変えて強くストレートへ打つのが難しくなります。さらに、どこへ打つかが相手の動きから読み取りやすくなります。
+ザイザー氏は「ここが待っていたチャンスだ」と言い切っています。バックハンドでは、相手はボールの向きを変えて強くストレートへ打つのが難しくなります。さらに、どこへ打つかが相手の動きから読み取りやすくなります。
 
 最後に、ザイザー氏は「正しい瞬間を待つことが、ポーチの成功につながる」とまとめています。
 
@@ -76,6 +78,6 @@ summary: "全米テニス協会のコーチが、相手の打つ位置とショ�
 
 ここからは、Doubles Labo編集部が追加した内容です。動画にはありません。
 
-- **用語は動画の動きで確認する:** 「インサイド／アウトサイドのストローク」の正確な意味は、動画の中の打ち方を見て確かめるのがおすすめです。大事なのは「相手がストレートに打ちやすい形か、打ちにくい形か」を見分けることです。
+- **相手がフォアかバックかを先に見る:** 相手が打つ前に「フォアで打つか、バックで打つか」と「立ち位置が内側か外側か」の2つを確認する癖をつけましょう。左利きの相手はフォアとバックが逆になるので注意です。
 - **ステイの場面でも「1回だけ」動く:** ステイが基本の場面でも、1試合に1回ポーチを見せておくと、相手は前衛を気にし始めます。
 - **ポーチとフェイクを組み合わせる:** 一度ポーチを見せたあとのフェイクは、効果が大きくなります。毎回同じ動きをせず、相手に迷わせることが大切です。
