@@ -129,3 +129,7 @@ a.float:hover{box-shadow:0 16px 40px -12px rgba(16,16,20,.35)}
 .matrix .stay{background:#F1F0ED;color:#3A3B40}.matrix .warn{background:#FFF4D6;color:#8A5A00}.matrix .go{background:#D7F64A;color:#2F3A00}
 .matrix .mh small{display:block;font-size:10.5px;font-weight:500;color:var(--dim)}
 .matrix .mh{flex-direction:column}
+.fig-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fig-pair svg{max-width:100%}
+.fig-label{text-align:center;font-size:13px;font-weight:600;margin-bottom:6px}
+@media (max-width:560px){.fig-pair{grid-template-columns:1fr}.fig-pair svg{max-width:320px;margin:0 auto}}
