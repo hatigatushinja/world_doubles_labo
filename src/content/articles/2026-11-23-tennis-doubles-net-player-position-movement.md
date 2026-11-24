@@ -5,7 +5,7 @@ category: "tactics"
 tags: ["前衛","立ち位置","動き方","ポーチ","Iフォーメーション","サイン","ジェイミー・マレー"]
 source: "Jamie Murray（YouTube）"
 sourceUrl: "https://www.youtube.com/watch?v=OVBPyCIoIDc"
-image: "/images/articles/2026-11-23-tennis-doubles-net-player-position-movement.jpg"
+image: "/images/articles/2026-11-23-tennis-doubles-net-player-position-movement-v4.jpg"
 summary: "テニスダブルスの前衛の立ち位置と動き方を、元ダブルス世界1位ジェイミー・マレーの解説5本から図解。構え方、守備範囲、ポーチのタイミング、Iフォーメーション、サインの種類まで、次の試合からすぐ使えるポイントを紹介します。"
 ---
 テニスのダブルスで前衛の立ち位置と動き方に迷ったら、元ダブルス世界1位ジェイミー・マレーの考え方が近道です。「どこに立てばいいのか」「いつ動けばいいのか」の答えを、本人の解説動画5本から図でまとめました。
