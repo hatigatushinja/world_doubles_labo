@@ -5,7 +5,7 @@ category: "feature"
 tags: ["ATPファイナルズ","フランス","ペア","タイブレーク"]
 source: "FFT（フランステニス連盟）"
 sourceUrl: "https://www.fft.fr/actualites/atp-finals-theo-arribage-albano-olivetti-masters-double-debut"
-image: "/images/articles/2026-11-23-fft-arribage-olivetti-atp-finals.jpg"
+image: "/images/articles/2026-11-23-fft-arribage-olivetti-atp-finals-v2.jpg"
 summary: "トップ50圏外から1年でダブルスの年間王者へ。最悪のスタート、ペアの手応え、そしてタイブレークの強さを本人たちの言葉で振り返る。"
 ---
 フランスのテオ・アリバジェとアルバノ・オリベッティが、トリノで行われたATPファイナルズのダブルスで優勝しました。決勝ではマルセロ・アレバロ／マテ・パビッチを3セットで破っています。フランステニス連盟（FFT）が、2人のこの1年をまとめた記事を出しているので、要点を紹介します。
