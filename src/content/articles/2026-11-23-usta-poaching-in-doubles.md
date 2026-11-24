@@ -5,7 +5,7 @@ category: "tactics"
 tags: ["ポーチ","フェイク","ネットプレー","USTA"]
 source: "USTA（全米テニス協会）"
 sourceUrl: "https://www.usta.com/en/home/improve/tips-and-instruction/national/improve-your-game--poaching-in-doubles.html"
-image: "/images/articles/2026-11-23-usta-poaching-in-doubles.jpg"
+image: "/images/articles/2026-11-23-usta-poaching-in-doubles-v2.jpg"
 summary: "全米テニス協会のコーチが、相手の打つ位置とショットの種類から、ポーチに出る・出ないを4つの場面に分けて解説。出るふりをする「逆ポーチ」も紹介します。"
 ---
 全米テニス協会（USTA）は、一般のプレーヤー向けにダブルスのコツを動画で公開しています。解説しているのは、USTAナショナルキャンパスのヘッドプロ、ベン・ザイザー氏です。ここでは、ポーチに関する2本の動画の内容を、日本語で要約して紹介します。
