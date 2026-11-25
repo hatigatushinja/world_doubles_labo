@@ -5,7 +5,7 @@ category: "tactics"
 tags: ["雁行陣","並行陣","2バック","陣形","ダブルス戦術","ロブ","LTA"]
 source: "LTA（英国テニス協会）Coach Forum 2023／Essential Tennis『Doubles Domination』／RFET（スペインテニス連盟）"
 sourceUrl: "https://www.lta.org.uk/4a890f/siteassets/coach-hub/resources/off-court/pdf/coach-forums-2023---doubles.pdf"
-image: "/images/articles/2026-11-25-one-up-one-back-vs-two-up-formation-v2.jpg"
+image: "/images/articles/2026-11-25-one-up-one-back-vs-two-up-formation-v3.jpg"
 summary: "テニスの雁行陣と並行陣の違いを、英国テニス協会のコーチ研修資料とプロの試合データで図解。2バックとの使い分け、雁行陣から並行陣へ切り替えるタイミング、並行陣のワイパーの動きと弱点（ロブ・足元）への対処まで、草大会ですぐ使える形にまとめました。"
 ---
 テニスのダブルスでよく聞く「雁行陣（がんこうじん）」と「並行陣（へいこうじん）」。名前は知っていても、何がどう違い、試合のどこで切り替えればいいのかは、意外とはっきりしません。この記事では、英国テニス協会（LTA）のコーチ研修会の資料、アメリカのコーチによるダブルスの教本、プロの試合を分析した研究をもとに、雁行陣・並行陣・2バックの違いと使い分けを、コート図5枚で整理しました。
