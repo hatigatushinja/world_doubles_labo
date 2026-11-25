@@ -5,6 +5,7 @@ category: "mindset"
 tags: ["ダブルス","ペア","実力差","相性","声かけ","メンタル","LTA"]
 source: "LTA（英国テニス協会）／Essential Tennis『Doubles Domination』／RFET（スペインテニス連盟）／ITF（国際テニス連盟）"
 sourceUrl: "https://www.lta.org.uk/advantage-home/content/how-to-improve-your-doubles-skills-your-questions-answered-by-expert-lta-coach-louis-cayer/"
+image: "/images/articles/2026-11-26-tennis-doubles-partner.jpg"
 summary: "テニスダブルスのペアに実力差があるときの役割分担、相性の見方、ミスが続いてイライラしたときの声かけを、英国テニス協会のコーチの助言をもとに解説。試合中の「マイ」「スイッチ」のタイミングや妨害のルール、ペアの探し方も紹介します。"
 ---
 テニスのダブルスで、真ん中のボールを2人とも見送った。ミスが続いて、何を言えばいいか分からなくなった。そんなときは、2人で次の1本の約束を一つ決めましょう。英国テニス協会（LTA）のコーチ、ルイ・カイエの助言を入り口に、ペアで使える役割分担と声かけを紹介します。
