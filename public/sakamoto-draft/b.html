@@ -34,7 +34,7 @@ th{font-size:12px;color:#889;font-weight:500}
 .faq details{border-bottom:1px solid var(--line);padding:14px 0}.faq summary{cursor:pointer;font-weight:600}.faq p{margin-top:8px;color:#556;line-height:1.8;font-size:14px}
 footer{text-align:center;color:#99a;font-size:12px;padding:40px}
 @media(max-width:860px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
-</style></head><body>
+.mtabs{display:inline-flex;background:#eef2f8;border-radius:10px;padding:3px;margin-bottom:8px}.mtabs button{border:0;background:none;padding:6px 14px;border-radius:8px;font:inherit;font-size:12px;color:#556;cursor:pointer}.mtabs button.on{background:#fff;color:var(--court);font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.08)}</style></head><body>
 <div class="top"><span><b>LATEST</b> 自己最高 世界122位に到達（2026/11/9付）</span><span>上海マスターズ 初の3回戦進出</span><span>全米オープン 四大大会初勝利</span></div>
 <header><div class="logo"><i></i>坂本怜 データベース</div><nav><a href="#">プロフィール</a><a href="#">成績</a><a href="#">試合結果</a><a href="#">記事</a><a href="#">FAQ</a></nav></header>
 <div class="wrap">
@@ -80,11 +80,7 @@ footer{text-align:center;color:#99a;font-size:12px;padding:40px}
  <g fill="#d4f13b" stroke="#1f4e8c" stroke-width="2"><circle cx="50" cy="198" r="5"/><circle cx="245" cy="94" r="5"/><circle cx="395" cy="66" r="5"/><circle cx="570" cy="43" r="6"/></g>
  <g font-size="12" font-weight="700" fill="#1f4e8c"><text x="58" y="192">TOP500</text><text x="250" y="86">206</text><text x="400" y="58">159</text><text x="540" y="30">122</text></g></svg>
  <p style="font-size:11px;color:#aab">※主要時点のみのイメージ。実装時はATP公式データから週次更新。</p></div>
- <div class="card"><h2>最近の主な試合</h2>
- <div class="match"><span><span class="l">L</span>vs デミノー<br><em>上海M 3回戦</em></span><em>2026/10</em></div>
- <div class="match"><span><span class="w">W</span>vs ルブレフ (23)<br><em>上海M 2回戦</em></span><em>2026/10</em></div>
- <div class="match"><span><span class="l">L</span>vs ティアフォー (11)<br><em>全米 2回戦</em></span><em>2026/8</em></div>
- <div class="match"><span><span class="w">W</span>vs ブキッチ<br><em>全米 1回戦</em></span><em>2026/8</em></div></div>
+ <div class="card"><h2>最近の主な試合</h2><div class="mtabs"><button class="on" onclick="mt(this,'tour')">ATPツアー</button><button onclick="mt(this,'ch')">チャレンジャー</button></div><div id="m-tour"><div class="match"><span><span class="l">L</span>vs Karen Khachanov (25)<br><em>アルマトイ 1回戦 ・ 6-2 6-4</em></span><em>2026/10</em></div><div class="match"><span><span class="w">W</span>vs Gabriel Diallo (149)<br><em>アルマトイ 予選2回戦 ・ 2-6 6-4 6-4</em></span><em>2026/10</em></div><div class="match"><span><span class="w">W</span>vs Amir Omarkhanov (615)<br><em>アルマトイ 予選1回戦 ・ 6-2 6-1</em></span><em>2026/10</em></div><div class="match"><span><span class="l">L</span>vs Alex De Minaur (9)<br><em>上海マスターズ 1回戦 ・ 7-6(6) 6-4</em></span><em>2026/10</em></div><div class="match"><span><span class="w">W</span>vs Andrey Rublev (23)<br><em>上海マスターズ 2回戦 ・ 6-4 6-4</em></span><em>2026/10</em></div><div class="match"><span><span class="w">W</span>vs Marco Trungelliti (90)<br><em>上海マスターズ 1回戦 ・ 6-3 7-5</em></span><em>2026/10</em></div></div><div id="m-ch" style="display:none"><div class="match"><span><span class="l">L</span>vs Billy Harris (227)<br><em>松山 CH 準決勝 ・ 4-6 2-2 RET</em></span><em>2026/11</em></div><div class="match"><span><span class="w">W</span>vs Ognjen Milic (392)<br><em>松山 CH 準々決勝 ・ 7-6(2) 6-2</em></span><em>2026/11</em></div><div class="match"><span><span class="w">W</span>vs Kasidit Samrej (375)<br><em>松山 CH 2回戦 ・ 6-4 6-2</em></span><em>2026/11</em></div><div class="match"><span><span class="w">W</span>vs Renta Tokuda (992)<br><em>松山 CH 1回戦 ・ 6-1 6-2</em></span><em>2026/11</em></div><div class="match"><span><span class="l">L</span>vs Billy Harris (252)<br><em>ソウル CH 準々決勝 ・ 3-0 RET</em></span><em>2026/10</em></div><div class="match"><span><span class="w">W</span>vs Zhizhen Zhang (166)<br><em>ソウル CH 2回戦 ・ 6-0 6-4</em></span><em>2026/10</em></div></div></div>
 </div><br>
 <div class="grid">
  <div class="card"><h2>四大大会 成績表</h2><table><tr><th>大会</th><th>2025</th><th>2026</th></tr>
@@ -98,4 +94,4 @@ footer{text-align:center;color:#99a;font-size:12px;padding:40px}
  <details><summary>公式YouTubeは？</summary><p>「REIVOLUTION channel」で発信中。</p></details></div>
 </div></div>
 <footer>本サイトは非公式ファンサイトです。データ出典：ATP Tour ほか</footer>
-</body></html>
+<script>function mt(b,k){var p=b.parentNode.children;for(var i=0;i<p.length;i++)p[i].classList.remove("on");b.classList.add("on");document.getElementById("m-tour").style.display=k=="tour"?"":"none";document.getElementById("m-ch").style.display=k=="ch"?"":"none";}</script></body></html>
