@@ -121,6 +121,7 @@ a.float:hover{box-shadow:0 16px 40px -12px rgba(16,16,20,.35)}
 .article-body h3{font-size:18px;font-weight:600;letter-spacing:-.02em;margin-top:1.6em;color:var(--text)}
 .fig{margin:1.8em 0}
 .fig svg{display:block;width:100%;max-width:360px;margin:0 auto;font-family:var(--sans)}
+.fig-quote img{display:block;width:100%;max-width:560px;height:auto;margin:0 auto;border:1px solid var(--line,#ddd);border-radius:8px}
 .fig figcaption{font-size:13px;color:var(--sub);line-height:1.7;margin-top:10px;text-align:center}
 .matrix{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px;font-size:13px;max-width:520px;margin:0 auto}
 .matrix .mh{display:flex;align-items:center;justify-content:center;text-align:center;font-weight:600;color:var(--sub);padding:6px}

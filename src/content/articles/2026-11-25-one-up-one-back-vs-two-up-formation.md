@@ -95,7 +95,11 @@ Essential Tennisは、2人ともネットにいるときの動き方を、こう
 
 ### どれくらいネットに近づくか
 
-LTAの研修会資料のコート図では、サイドラインの外に緑・黄・赤の印が付いていて、ネットに近いほうから緑、黄、赤の順に並んでいます（編集部の読み取り）。「壁」の章には、<strong>ATPとWTA（男女のプロツアー）で、2人とも黄色の位置で壁を作ったときは、ポイントの60%を取っている</strong>という数字があります。試合数や期間の記載はありません。
+LTAの研修会資料のコート図では、サイドラインの外に緑・黄・赤の印が付いていて、ネットに近いほうから緑、黄、赤の順に並んでいます（下の図。手前のコートの右側）。色ごとの意味は資料に書かれていないため、この並びの読み方は編集部によるものです。
+
+<figure class="fig fig-quote"><img src="/images/articles/2026-11-25-lta-the-wall-positions.jpg" alt="LTA Coach Forum 2023のコート図。サイドラインの外に、ネットに近いほうから緑・黄・赤の印がある" width="1010" height="730" loading="lazy"><figcaption>【引用】LTA（英国テニス協会）「Coach Forum 2023 – British Tennis Doubles System」p.37 のコート図（講師: ルイ・カイエ）。コート部分を切り出して掲載。出典: <a href="https://www.lta.org.uk/4a890f/siteassets/coach-hub/resources/off-court/pdf/coach-forums-2023---doubles.pdf" rel="nofollow noopener" target="_blank">LTA Coach Forum 2023（PDF）</a></figcaption></figure>
+
+「壁」の章には、<strong>ATPとWTA（男女のプロツアー）で、2人とも黄色の位置で壁を作ったときは、ポイントの60%を取っている</strong>という数字があります。試合数や期間の記載はありません。
 
 LTAの一般向けの記事でも、前衛の深さは「攻めているときはネット寄り、互角ならサービスボックスの真ん中、守っているときはサービスライン寄り」とされています。
 
