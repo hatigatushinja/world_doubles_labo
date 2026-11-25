@@ -5,7 +5,7 @@ category: "tactics"
 tags: ["後衛","立ち位置","動き方","雁行陣","サーブ","リターン","ロブ","LTA"]
 source: "Essential Tennis『Doubles Domination』／LTA（英国テニス協会）"
 sourceUrl: "https://www.essentialtennis.com/doublesebook.pdf"
-image: "/images/articles/2026-11-25-tennis-doubles-baseline-player-position.jpg"
+image: "/images/articles/2026-11-25-tennis-doubles-baseline-player-position-v2.jpg"
 summary: "テニスのダブルスで後衛はどこに立つ？サーバーとリターナーの立ち位置、サーブ後の動き方、前衛との連動、ロブのカバーと「スイッチ」、苦しいときの返球先まで、英国テニス協会と米国コーチの教本をもとに図で解説します。"
 ---
 この記事は、テニスのダブルスで後衛をするための「教科書」です。サーブを打つとき、リターンを打つとき、ベースラインのどこに立ち、打った後にどう動けばいいのか。アメリカのテニス指導サイトEssential Tennisのダブルス教本と、英国テニス協会（LTA）のコーチの解説をもとに、図でまとめました。
