@@ -1,0 +1,166 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>案B COURT DATA｜坂本怜 非公式ファンサイト</title>
+<style>
+:root{--court:#1f4e8c;--line:#e9eef5;--ball:#d4f13b;--txt:#1b2330}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;color:var(--txt);background:#f7f9fc}
+.top{background:var(--court);color:#fff;font-size:12px;padding:8px 4vw;display:flex;gap:24px;overflow:hidden;white-space:nowrap}
+.top b{color:var(--ball)}
+header{background:#fff;border-bottom:1px solid var(--line);padding:16px 4vw;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:5}
+.logo{font-weight:800;letter-spacing:.02em}.logo i{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--ball);border:2px solid var(--court);margin-right:6px;vertical-align:-1px}
+nav a{margin-left:22px;font-size:14px;color:#556;text-decoration:none}
+.wrap{max-width:1180px;margin:auto;padding:32px 4vw}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h2{font-size:15px;color:#667;margin-bottom:16px;display:flex;justify-content:space-between}
+.card h2 a{font-size:12px;color:var(--court)}
+.profile{display:flex;gap:24px;align-items:center}
+.avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--court),#3a78c9);display:grid;place-items:center;color:#fff;font-size:44px;font-weight:800;flex:none}
+.profile h1{font-size:30px}.profile h1 small{font-size:14px;color:#889;margin-left:8px;font-weight:400}
+.tags span{display:inline-block;background:#eef3fa;color:var(--court);border-radius:99px;padding:4px 10px;font-size:12px;margin:8px 6px 0 0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.kpi{background:#f3f6fb;border-radius:10px;padding:14px}.kpi b{font-size:26px;display:block}.kpi span{font-size:12px;color:#778}
+.rank{font-size:64px;font-weight:800;color:var(--court);line-height:1}.rank small{font-size:14px;color:#889}
+.up{color:#17a673;font-weight:700;font-size:14px}
+svg{width:100%;height:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left}
+th{font-size:12px;color:#889;font-weight:500}
+.r{display:inline-block;min-width:64px;text-align:center;border-radius:6px;padding:2px 8px;font-size:12px;background:#eef1f5}
+.r.best{background:var(--ball);font-weight:700}
+.match{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+.match .w{color:#fff;background:#17a673;border-radius:4px;padding:1px 7px;font-size:11px;margin-right:8px}
+.match .l{color:#fff;background:#c0392b;border-radius:4px;padding:1px 7px;font-size:11px;margin-right:8px}
+.match em{color:#889;font-style:normal;font-size:12px}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}.faq summary{cursor:pointer;font-weight:600}.faq p{margin-top:8px;color:#556;line-height:1.8;font-size:14px}
+footer{text-align:center;color:#99a;font-size:12px;padding:40px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
+.mtabs{display:inline-flex;background:#eef2f8;border-radius:10px;padding:3px;margin-bottom:8px}.mtabs button{border:0;background:none;padding:6px 14px;border-radius:8px;font:inherit;font-size:12px;color:#556;cursor:pointer}.mtabs button.on{background:#fff;color:var(--court);font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.08)}.h2h{color:var(--court);font-weight:700;text-decoration:underline;text-underline-offset:3px}.h2h::after{content:' H2H↗';font-size:10px;font-weight:400;color:#99a}
+/* ===== PC強化 ===== */
+.hero{position:relative;min-height:min(62vh,560px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#0d1b2e}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;animation:heroIn 1.2s ease-out both}
+@keyframes heroIn{from{transform:scale(1.06);opacity:0}to{transform:scale(1);opacity:1}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,16,30,.92) 0%,rgba(8,16,30,.55) 45%,rgba(8,16,30,.05) 100%)}
+.slash{position:absolute;width:180vw;height:5px;background:#d7262e;transform:rotate(-12deg);left:-40vw;top:14%;box-shadow:0 0 24px rgba(215,38,46,.7);z-index:2}
+.hero .in{position:relative;z-index:3;max-width:1180px;margin:auto;padding:56px 5vw;width:100%}
+.hero small{letter-spacing:.5em;color:#ff5a62;font-size:12px;font-weight:700}
+.hero h1{font-size:clamp(34px,5.2vw,72px);line-height:1.1;margin:14px 0 10px;letter-spacing:.04em;font-weight:900;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+.hero h1 span{display:block;font-size:.34em;letter-spacing:.18em;font-weight:500;color:#dfe8f5;margin-top:8px}
+.hero p{max-width:34em;color:#cfd9e8;font-size:14px;line-height:1.9}
+.hero .cred{position:absolute;right:14px;bottom:8px;z-index:3;font-size:10px;color:rgba(255,255,255,.75)}
+.hero .cred a{color:inherit;text-decoration:underline}
+.kband{background:#0d1b2e;color:#fff;padding:0 5vw}
+.kband .in{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.kband .k{padding:22px 8px;border-left:1px solid rgba(255,255,255,.12);text-align:center}
+.kband .k:first-child{border-left:0}
+.kband b{font-size:40px;font-weight:900;color:#fff;font-variant-numeric:tabular-nums;display:block;line-height:1.1}
+.kband b i{font-style:normal;font-size:15px;color:#9fb2cc;font-weight:500;margin-left:3px}
+.kband span{font-size:11px;letter-spacing:.25em;color:#8ea3c2}
+.sect{background:var(--court);color:#fff;margin:0 0 26px;padding:14px 5vw;position:relative;overflow:hidden}
+.sect::before{content:"";position:absolute;right:-3vw;top:-60%;width:160px;height:220%;background:#d7262e;transform:rotate(18deg);opacity:.9}
+.sect .in{max-width:1180px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.sect h2{color:#fff;font-size:22px;letter-spacing:.08em;margin:0;display:block}
+.sect p{margin:2px 0 0;font-size:12px;color:#cfe0f5;letter-spacing:.12em}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:1180px;margin:0 auto 26px;padding:0 5vw}
+.gal figure{margin:0;position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#dde;box-shadow:0 8px 24px rgba(20,40,80,.14);transition:transform .25s}
+.gal figure:hover{transform:translateY(-5px)}
+.gal img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 8px;font-size:11px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.gal figcaption a{color:#fff;text-decoration:underline}
+.two{max-width:1180px;margin:0 auto 26px;padding:0 5vw;display:grid;grid-template-columns:2fr 1fr;gap:24px}
+.two .card{margin:0}
+.strip{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.strip .p{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px}
+.strip .p.W{background:#17a673}.strip .p.L{background:#c0392b}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.mini div{background:#f3f6fb;border-radius:10px;padding:12px}
+.mini b{font-size:22px;color:var(--court);display:block}
+.mini span{font-size:11px;color:#778}
+.tick{overflow:hidden;position:relative}
+.tick>span{display:inline-block;white-space:nowrap;padding-left:100%;animation:tick 28s linear infinite}
+@keyframes tick{to{transform:translateX(-100%)}}
+.cd{font-variant-numeric:tabular-nums}
+@media(max-width:860px){.hero{min-height:44vh}.hero .in{padding:70px 5vw 34px}.kband .in{grid-template-columns:repeat(2,1fr)}.kband .k:nth-child(3){border-left:0}.two{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}.sect::before{width:110px}.slash{top:8%}}
+@media(prefers-reduced-motion:reduce){.hero img,.tick>span{animation:none}}
+</style></head><body>
+<div class="hero"><img src="img/hero.jpg" alt="坂本怜（2026年 ケーリー）"><div class="slash"></div>
+<div class="in"><small>REI SAKAMOTO ／ 坂本 怜</small><h1>侍の刃で、世界へ。<span>195cmのビッグサーバーが、Next Gen ATPファイナルズへ。</span></h1>
+<p>46勝27敗で駆け抜けた2026年。日本人初のNext Gen出場を決めた坂本選手を、データと一緒に応援する非公式ファンサイトです。</p></div>
+<div class="cred">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rei_Sakamoto_(2026_Cary)_04.jpg" target="_blank" rel="noopener">Hameltion</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></div></div>
+<div class="kband"><div class="in">
+<div class="k"><b class="cnt" data-n="138"><i>位</i></b><span>ATPランキング</span></div>
+<div class="k"><b class="cnt" data-n="420"><i>pt</i></b><span>ランキングポイント</span></div>
+<div class="k"><b class="cnt" data-n="46">-<i>27</i></b><span>2026年 勝敗</span></div>
+<div class="k"><b class="cd" id="cd">-<i>日</i></b><span>NEXT GEN開幕まで</span></div>
+</div></div><div class="top tick"><span><span><b>LATEST</b> 自己最高 世界122位に到達（2026/11/9付）</span><span>上海マスターズ 初の3回戦進出</span><span>全米オープン 四大大会初勝利</span> <span><b>LATEST</b> 自己最高 世界122位に到達（2026/11/9付）</span><span>上海マスターズ 初の3回戦進出</span><span>全米オープン 四大大会初勝利</span></span></div>
+<header><div class="logo"><i></i>坂本怜 データベース</div><nav><a href="#">プロフィール</a><a href="#">成績</a><a href="#">試合結果</a><a href="https://sakamoto-rei-fansite.pages.dev/articles/index.html">記事</a><a href="#">FAQ</a></nav></header>
+<div class="sect"><div class="in"><h2>NEXT MATCH ／ 次の試合</h2><p>日本人初の舞台。レッジョ・カラブリアから世界へ</p></div></div><div class="wrap">
+<div class="two"><div class="grid">
+ <div class="card"><div class="profile"><figure style="margin:0;flex:none;text-align:center"><div class="avatar" role="img" aria-label="坂本怜（2026年 ケーリー）" style="background:url(img/c01.jpg) 66% 12%/200% auto no-repeat #1f4e8c"></div><figcaption style="font-size:9px;color:#99a;margin-top:4px;line-height:1.4">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rei_Sakamoto_(2026_Cary)_01.jpg" target="_blank" rel="noopener" style="color:#99a">Hameltion</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener" style="color:#99a">CC BY-SA 4.0</a></figcaption></figure><div><h1>坂本 怜<small>Rei Sakamoto / さかもと れい</small></h1>
+ <div class="tags"><span>🇯🇵 愛知・名古屋</span><span>2006/6/24生</span><span>右利き・両手BH</span><span>IMGアカデミー</span><span>YONEX</span></div></div></div>
+ <div class="kpis"><div class="kpi"><b>195<small style="font-size:13px">cm</small></b><span>身長</span></div><div class="kpi"><b>3</b><span>チャレンジャー優勝</span></div><div class="kpi"><b>2024</b><span>全豪Jr.優勝</span></div><div class="kpi"><b>F.リッチ</b><span>コーチ</span></div></div></div>
+ <div class="card"><h2>ATPシングルス ランキング</h2><div class="rank">138<small> 位</small></div><p class="up">420pt ・ 自己最高 122位（2026/11/9）</p><p style="font-size:13px;color:#778;margin-top:10px">TOP100ライン（616pt）まであと196pt。到達すれば四大大会本戦へストレートイン。</p>
+ <div style="height:8px;background:#eef1f5;border-radius:9px;margin-top:12px"><div style="width:68%;height:100%;background:var(--court);border-radius:9px"></div></div></div>
+</div><div class="card"><h2>2026年 数字で見る</h2><div class="mini"><div><b>19-12</b><span>ATPツアー（本戦・予選）</span></div><div><b>35-19</b><span>ハードコート</span></div><div><b>122</b><span>自己最高（11/9）</span></div><div><b>27-15</b><span>チャレンジャー</span></div></div><h2 style="margin-top:18px">直近5試合</h2><div class="strip"><span class="p L">L</span><span class="p W">W</span><span class="p W">W</span><span class="p W">W</span><span class="p L">L</span></div><p style="font-size:11px;color:#889;margin-top:10px">直近の試合から左へ。緑が勝ち、赤が負けです。</p></div></div><div class="two">
+<div class="grid">
+ <div class="card" style="border:2px solid var(--ball);background:linear-gradient(135deg,#fff,#f6fade)">
+  <h2>次の試合 NEXT MATCH</h2>
+  <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+   <div style="flex:1;min-width:200px">
+    <div style="font-size:22px;font-weight:800;color:var(--court)">Next Gen ATPファイナルズ 2026</div>
+    <div style="font-size:13px;color:#667;margin-top:6px">2026/12/9（水）〜 12/13（日）｜ レッジョ・カラブリア（イタリア）｜ 室内ハード</div>
+    <div style="margin-top:12px"><span class="r best" style="background:var(--ball)">出場決定</span> <span class="r">第3シード想定</span> <span class="r">21歳以下のトップ8</span></div>
+   </div>
+   <div style="text-align:center">
+    <div class="cd nm" style="font-family:Impact,sans-serif;font-size:44px;color:var(--court);line-height:1">-<span style="font-size:18px;color:#889">日後</span></div>
+    <div style="font-size:11px;color:#889;letter-spacing:.15em">COUNTDOWN</div>
+   </div>
+  </div>
+  <p style="font-size:11px;color:#889;margin-top:12px">※グループ抽選後に組み合わせ・日程を更新予定。 錦織以外で日本勢初のNext Gen出場。</p>
+ </div>
+</div>
+<div class="grid" style="margin-top:24px">
+ <div class="card"><h2>最新記事 ARTICLES</h2>
+  <div class="match"><span><a href="https://sakamoto-rei-fansite.pages.dev/articles/nextgen-finals-2026-preview.html" style="color:var(--court);font-weight:700;text-decoration:none">Next Gen ATPファイナルズ2026 プレビュー</a><br><em>出場8名・フォーマット・坂本の勝算を徹底解説</em></span><em>11/25</em></div>
+  <div class="match"><span><a href="https://sakamoto-rei-fansite.pages.dev/articles/usopen-2026-vs-nishikori.html" style="color:var(--court);font-weight:700;text-decoration:none">全米2026 予選決勝 vs 錦織圭</a><br><em>世代交代の瞬間となった一戦を振り返る</em></span><em>11/24</em></div>
+  <div class="match"><span><a href="https://sakamoto-rei-fansite.pages.dev/articles/shanghai-2026-rublev.html" style="color:var(--court);font-weight:700;text-decoration:none">上海マスターズ vs ルブレフ戦</a><br><em>ATPトップ20からの白星を分析</em></span><em>11/24</em></div>
+  <div class="match"><span><a href="https://sakamoto-rei-fansite.pages.dev/articles/results-2026-season.html" style="color:var(--court);font-weight:700;text-decoration:none">2026シーズン全成績まとめ</a><br><em>46勝27敗・月別・サーフェス別データ</em></span><em>11/24</em></div>
+  <p style="font-size:11px;color:#889;margin-top:10px"><a href="https://sakamoto-rei-fansite.pages.dev/articles/index.html" style="color:var(--court)">すべての記事を見る（10本）→</a></p></div>
+</div>
+
+
+<div class="grid">
+ <div class="card"><h2>ランキング推移<a href="#">詳細 →</a></h2>
+ <svg viewBox="0 0 600 220"><g stroke="#e9eef5"><line x1="40" y1="30" x2="590" y2="30"/><line x1="40" y1="90" x2="590" y2="90"/><line x1="40" y1="150" x2="590" y2="150"/><line x1="40" y1="200" x2="590" y2="200"/></g>
+ <g font-size="11" fill="#99a"><text x="4" y="34">100</text><text x="4" y="94">200</text><text x="4" y="154">300</text><text x="4" y="204">500</text><text x="40" y="218">24/11</text><text x="230" y="218">25/7</text><text x="380" y="218">25/11</text><text x="545" y="218">26/11</text></g>
+ <polyline fill="none" stroke="#1f4e8c" stroke-width="3" points="50,198 245,94 395,66 570,43"/>
+ <g fill="#d4f13b" stroke="#1f4e8c" stroke-width="2"><circle cx="50" cy="198" r="5"/><circle cx="245" cy="94" r="5"/><circle cx="395" cy="66" r="5"/><circle cx="570" cy="43" r="6"/></g>
+ <g font-size="12" font-weight="700" fill="#1f4e8c"><text x="58" y="192">TOP500</text><text x="250" y="86">206</text><text x="400" y="58">159</text><text x="540" y="30">138</text></g></svg>
+ <p style="font-size:11px;color:#aab">※主要時点のみのイメージ。実装時はATP公式データから週次更新。</p></div>
+ <div class="card"><h2>最近の主な試合</h2><div class="mtabs"><button class="on" onclick="mt(this,'tour')">ATPツアー</button><button onclick="mt(this,'ch')">チャレンジャー</button></div><div id="m-tour"><div class="match"><span><span class="l">L</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-karen-khachanov/S0UV/KE29" target="_blank" rel="noopener">Karen Khachanov</a> (25)<br><em>アルマトイ 1回戦 ・ 6-2 6-4</em></span><em>2026/10</em></div><div class="match"><span><span class="w">W</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-gabriel-diallo/S0UV/D0F6" target="_blank" rel="noopener">Gabriel Diallo</a> (149)<br><em>アルマトイ 予選2回戦 ・ 2-6 6-4 6-4</em></span><em>2026/10</em></div><div class="match"><span><span class="w">W</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-amir-omarkhanov/S0UV/O0E7" target="_blank" rel="noopener">Amir Omarkhanov</a> (615)<br><em>アルマトイ 予選1回戦 ・ 6-2 6-1</em></span><em>2026/10</em></div><div class="match"><span><span class="l">L</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-alex-de-minaur/S0UV/DH58" target="_blank" rel="noopener">Alex De Minaur</a> (9)<br><em>上海マスターズ 1回戦 ・ 7-6(6) 6-4</em></span><em>2026/10</em></div><div class="match"><span><span class="w">W</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-andrey-rublev/S0UV/RE44" target="_blank" rel="noopener">Andrey Rublev</a> (23)<br><em>上海マスターズ 2回戦 ・ 6-4 6-4</em></span><em>2026/10</em></div><div class="match"><span><span class="w">W</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-marco-trungelliti/S0UV/TA29" target="_blank" rel="noopener">Marco Trungelliti</a> (90)<br><em>上海マスターズ 1回戦 ・ 6-3 7-5</em></span><em>2026/10</em></div></div><div id="m-ch" style="display:none"><div class="match"><span><span class="l">L</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-billy-harris/S0UV/HD68" target="_blank" rel="noopener">Billy Harris</a> (227)<br><em>松山 CH 準決勝 ・ 4-6 2-2 RET</em></span><em>2026/11</em></div><div class="match"><span><span class="w">W</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-ognjen-milic/S0UV/M0UR" target="_blank" rel="noopener">Ognjen Milic</a> (392)<br><em>松山 CH 準々決勝 ・ 7-6(2) 6-2</em></span><em>2026/11</em></div><div class="match"><span><span class="w">W</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-kasidit-samrej/S0UV/S0HR" target="_blank" rel="noopener">Kasidit Samrej</a> (375)<br><em>松山 CH 2回戦 ・ 6-4 6-2</em></span><em>2026/11</em></div><div class="match"><span><span class="w">W</span>vs Renta Tokuda (992)<br><em>松山 CH 1回戦 ・ 6-1 6-2</em></span><em>2026/11</em></div><div class="match"><span><span class="l">L</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-billy-harris/S0UV/HD68" target="_blank" rel="noopener">Billy Harris</a> (252)<br><em>ソウル CH 準々決勝 ・ 3-0 RET</em></span><em>2026/10</em></div><div class="match"><span><span class="w">W</span>vs <a class="h2h" href="https://www.atptour.com/en/players/atp-head-2-head/rei-sakamoto-vs-zhizhen-zhang/S0UV/Z371" target="_blank" rel="noopener">Zhizhen Zhang</a> (166)<br><em>ソウル CH 2回戦 ・ 6-0 6-4</em></span><em>2026/10</em></div></div></div>
+</div><div class="card"><h2>ギャラリー</h2><div style="display:grid;gap:8px"><img src="img/c02.jpg" alt="坂本怜 バックハンド" style="border-radius:10px;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 15%"><img src="img/c03.jpg" alt="坂本怜 フォアハンド" style="border-radius:10px;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 15%"></div><p style="font-size:10px;color:#99a;margin-top:6px">Photo: Hameltion / CC BY-SA 4.0</p></div></div><br>
+<div class="sect"><div class="in"><h2>DATA ／ データで見る坂本選手</h2><p>ランキングの推移と、直近の試合</p></div></div><div class="gal"><figure><img src="img/hero.jpg" alt="坂本怜（2026年 ケーリー） 構えを解く瞬間"><figcaption>構えを解く瞬間 <a href="https://commons.wikimedia.org/wiki/File:Rei_Sakamoto_(2026_Cary)_04.jpg" target="_blank" rel="noopener">Hameltion / CC BY-SA 4.0</a></figcaption></figure><figure><img src="img/c02.jpg" alt="坂本怜（2026年 ケーリー） バックハンド"><figcaption>バックハンド <a href="https://commons.wikimedia.org/wiki/File:Rei_Sakamoto_(2026_Cary)_02.jpg" target="_blank" rel="noopener">Hameltion / CC BY-SA 4.0</a></figcaption></figure><figure><img src="img/c03.jpg" alt="坂本怜（2026年 ケーリー） 片ひざの構え"><figcaption>片ひざの構え <a href="https://commons.wikimedia.org/wiki/File:Rei_Sakamoto_(2026_Cary)_03.jpg" target="_blank" rel="noopener">Hameltion / CC BY-SA 4.0</a></figcaption></figure><figure><img src="img/c01.jpg" alt="坂本怜（2026年 ケーリー） バックハンドの引き"><figcaption>バックハンドの引き <a href="https://commons.wikimedia.org/wiki/File:Rei_Sakamoto_(2026_Cary)_01.jpg" target="_blank" rel="noopener">Hameltion / CC BY-SA 4.0</a></figcaption></figure></div><div class="grid">
+ <div class="card"><h2>四大大会 成績表</h2><table><tr><th>大会</th><th>2025</th><th>2026</th></tr>
+ <tr><td>全豪オープン</td><td><span class="r">Q1</span></td><td><span class="r best">1R</span></td></tr>
+ <tr><td>全仏オープン</td><td><span class="r">—</span></td><td><span class="r">Q1</span></td></tr>
+ <tr><td>ウィンブルドン</td><td><span class="r">Q</span></td><td><span class="r">Q3</span></td></tr>
+ <tr><td>全米オープン</td><td><span class="r">Q2</span></td><td><span class="r best">2R</span></td></tr></table></div>
+ <div class="card faq"><h2>よくある質問</h2>
+ <details open><summary>「坂本玲」と「坂本怜」どっち？</summary><p>正しくは「坂本<b>怜</b>」。同じ読みの別人もいるので注意。</p></details>
+ <details><summary>試合はどこで観られる？</summary><p>WOWOW、Tennis TVなど（大会により異なる）。</p></details>
+ <details><summary>公式YouTubeは？</summary><p>「REIVOLUTION channel」で発信中。</p></details></div>
+</div></div>
+<footer>本サイトは非公式ファンサイトです。データ出典：ATP Tour ほか</footer>
+<script>function mt(b,k){var p=b.parentNode.children;for(var i=0;i<p.length;i++)p[i].classList.remove("on");b.classList.add("on");document.getElementById("m-tour").style.display=k=="tour"?"":"none";document.getElementById("m-ch").style.display=k=="ch"?"":"none";}</script><script>
+(function(){
+ var t=new Date('2026-12-09T00:00:00+09:00').getTime();
+ var d=Math.max(0,Math.ceil((t-Date.now())/86400000));
+ var k=document.getElementById('cd'); if(k) k.innerHTML=d+'<i>日</i>';
+ document.querySelectorAll('.cd.nm').forEach(function(e){e.innerHTML=d+'<span style="font-size:18px;color:#889">日後</span>'});
+ document.querySelectorAll('.cnt').forEach(function(e){
+  var n=+e.dataset.n, i=e.querySelector('i'), suf=i?i.outerHTML:'', t0=null;
+  if(!n){return}
+  function step(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/1100), v=Math.round(n*(1-Math.pow(1-p,3))); e.innerHTML=v+suf; if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);
+ });
+})();
+</script></body></html>
