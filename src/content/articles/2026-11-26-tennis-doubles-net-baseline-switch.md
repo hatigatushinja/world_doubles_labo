@@ -5,6 +5,7 @@ category: "tactics"
 tags: ["前衛","後衛","入れ替わり","スイッチ","雁行陣","ロブ","ダブルス戦術"]
 source: "Essential Tennis『Doubles Domination』／LTA（英国テニス協会）Coach Forum 2023／ITF『2026 Rules of Tennis』"
 sourceUrl: "https://www.essentialtennis.com/doublesebook.pdf"
+image: "/images/articles/2026-11-26-tennis-doubles-net-baseline-switch.jpg"
 summary: "テニスダブルスの前衛と後衛の交代をコート図4枚で解説。前衛の頭上をロブで抜かれたとき、誰が追い、どこへ動くかをスイッチの流れで紹介します。入れ替わり直後の守り方や高いロブで立て直す方法、サーブとレシーブの担当を変えられる時期もわかります。"
 ---
 
